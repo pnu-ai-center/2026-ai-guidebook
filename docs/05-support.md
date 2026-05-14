@@ -6,6 +6,7 @@ sidebar_position: 5
 description: 교육생 지원 혜택을 소개합니다.
 
 theme: orange
+thumbnail: thumbnails/template.png
 ---
 
 <div className="brochureHero brochureHeroOrange">

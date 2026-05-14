@@ -2,6 +2,7 @@
 id: intro
 sidebar_position: 1
 title: 인사말
+thumbnail: thumbnails/template.png
 ---
 
 # 부산대학교 AI융합교육원

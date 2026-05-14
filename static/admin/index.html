@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>브로슈어 관리 | AI융합교육원</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --blue:#2563eb;--blue-light:#eff6ff;--blue-dark:#1d4ed8;
+    --gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;
+    --gray-400:#9ca3af;--gray-500:#6b7280;--gray-600:#4b5563;--gray-900:#111827;
+    --green:#16a34a;--green-light:#f0fdf4;--green-border:#bbf7d0;
+    --red:#dc2626;--red-light:#fef2f2;--red-border:#fecaca;
+    --radius:16px;--shadow:0 4px 24px rgba(0,0,0,.07);
+  }
+  body{font-family:'Noto Sans KR',sans-serif;background:var(--gray-100);color:var(--gray-900);min-height:100vh}
+
+  /* NAV */
+  nav{
+    background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--gray-200);
+    padding:0 32px;height:60px;
+    display:flex;align-items:center;justify-content:space-between;
+    position:sticky;top:0;z-index:100;
+  }
+  .nav-left{display:flex;align-items:center;gap:12px}
+  .nav-title{font-weight:800;font-size:1rem}
+  .nav-org{font-size:.78rem;color:var(--gray-400);font-weight:500}
+  .nav-user{display:flex;align-items:center;gap:8px;display:none}
+  .nav-avatar{width:28px;height:28px;border-radius:50%;border:2px solid var(--gray-200)}
+  .nav-username{font-size:.82rem;font-weight:700;color:var(--gray-600)}
+  .nav-member-badge{font-size:.7rem;font-weight:700;color:var(--green);background:var(--green-light);border:1px solid var(--green-border);padding:3px 8px;border-radius:999px}
+
+  /* LAYOUT */
+  .container{max-width:720px;margin:0 auto;padding:48px 24px 100px}
+
+  /* LOGIN SCREEN */
+  #screen-login{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 60px);padding:24px}
+  .login-card{background:white;border-radius:24px;border:1px solid var(--gray-200);padding:48px;box-shadow:var(--shadow);width:100%;max-width:460px}
+  .login-icon{font-size:2.8rem;margin-bottom:20px;text-align:center}
+  .login-title{font-size:1.5rem;font-weight:800;margin-bottom:8px;text-align:center}
+  .login-sub{font-size:.88rem;color:var(--gray-500);line-height:1.7;text-align:center;margin-bottom:32px}
+  .login-info{background:var(--blue-light);border-radius:12px;padding:14px 16px;margin-bottom:24px;font-size:.82rem;color:var(--blue-dark);line-height:1.7}
+  .login-info strong{font-weight:700}
+
+  /* FORM */
+  label{display:block;font-size:.82rem;font-weight:700;color:var(--gray-600);margin-bottom:6px}
+  input{width:100%;padding:11px 14px;border:1.5px solid var(--gray-200);border-radius:10px;font-size:.95rem;font-family:inherit;outline:none;transition:.2s;background:white;color:var(--gray-900)}
+  input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+  .field{margin-bottom:16px}
+  .hint{font-size:.76rem;color:var(--gray-400);margin-top:5px}
+  .hint-link{color:var(--blue);text-decoration:none}
+  .hint-link:hover{text-decoration:underline}
+
+  /* BTN */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:10px;font-size:.92rem;font-weight:700;font-family:inherit;border:none;cursor:pointer;transition:all .2s}
+  .btn-full{width:100%}
+  .btn-primary{background:var(--blue);color:white}
+  .btn-primary:hover:not(:disabled){background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,99,235,.3)}
+  .btn-primary:disabled{background:var(--gray-400);cursor:not-allowed}
+  .btn-outline{background:white;color:var(--gray-600);border:1.5px solid var(--gray-200)}
+  .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+  .btn-sm{padding:7px 14px;font-size:.8rem}
+  .btn-danger{background:var(--red-light);color:var(--red);border:1.5px solid var(--red-border)}
+  .btn-danger:hover{background:#fee2e2}
+  .btn-ghost{background:none;border:none;color:var(--gray-400);cursor:pointer;font-size:.82rem;font-family:inherit;padding:4px 8px;border-radius:6px}
+  .btn-ghost:hover{color:var(--gray-900);background:var(--gray-100)}
+
+  /* ERROR */
+  .error-box{background:var(--red-light);border:1px solid var(--red-border);border-radius:10px;padding:12px 16px;font-size:.84rem;color:var(--red);margin-top:12px;display:none;line-height:1.6}
+
+  /* MAIN SCREEN */
+  #screen-main{display:none}
+
+  /* SECTION */
+  .section{background:white;border-radius:var(--radius);border:1px solid var(--gray-200);padding:28px 32px;margin-bottom:16px;box-shadow:var(--shadow)}
+  .section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+  .section-title{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-400)}
+
+  /* DOCS LIST */
+  #docs-list{display:flex;flex-direction:column;gap:8px}
+  .doc-item{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px}
+  .doc-icon{font-size:1rem}
+  .doc-name{flex:1;font-size:.88rem;font-weight:600}
+  .doc-sha{font-size:.72rem;color:var(--gray-400);font-family:monospace}
+  .doc-empty{font-size:.85rem;color:var(--gray-400);padding:8px 0}
+
+  /* DROP ZONE */
+  #dropzone{
+    border:2px dashed var(--gray-200);border-radius:var(--radius);
+    padding:44px;text-align:center;cursor:pointer;transition:.2s;background:var(--gray-50);
+  }
+  #dropzone:hover,#dropzone.dragover{border-color:var(--blue);background:var(--blue-light)}
+  #dropzone.has-files{border-color:var(--green);background:var(--green-light)}
+  .drop-icon{font-size:2.4rem;margin-bottom:10px}
+  .drop-label{font-size:.95rem;font-weight:700;color:var(--gray-600);margin-bottom:4px}
+  .drop-hint{font-size:.8rem;color:var(--gray-400)}
+
+  /* FILE CARDS */
+  #file-list{margin-top:16px;display:flex;flex-direction:column;gap:12px}
+  .file-card{background:var(--gray-50);border:1.5px solid var(--gray-200);border-radius:14px;overflow:hidden;transition:.2s}
+  .file-card.ready{border-color:var(--green)}
+  .file-card-header{display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border-bottom:1px solid var(--gray-200)}
+  .file-card-icon{font-size:1.1rem}
+  .file-card-name{flex:1;font-size:.88rem;font-weight:700;color:var(--gray-900)}
+  .file-card-size{font-size:.74rem;color:var(--gray-400)}
+  .file-card-remove{cursor:pointer;color:var(--gray-400);background:none;border:none;font-size:.9rem;padding:3px 7px;border-radius:6px;line-height:1}
+  .file-card-remove:hover{color:var(--red);background:var(--red-light)}
+  .file-card-body{padding:16px;display:grid;grid-template-columns:1fr 80px;gap:10px 12px}
+  .file-card-body .field{margin:0}
+  .file-card-body label{font-size:.74rem;font-weight:700;color:var(--gray-400);margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase}
+  .file-card-body input,.file-card-body select,.file-card-body textarea{padding:8px 10px;font-size:.85rem}
+  .file-card-body textarea{resize:vertical;min-height:56px;grid-column:1/-1}
+  .field-full{grid-column:1/-1}
+  .theme-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+
+  /* PROGRESS */
+  .progress-wrap{margin-top:16px;display:none}
+  .progress-bar{height:5px;background:var(--gray-200);border-radius:999px;overflow:hidden}
+  .progress-fill{height:100%;background:var(--blue);border-radius:999px;transition:width .3s ease;width:0%}
+  .progress-label{font-size:.76rem;color:var(--gray-400);margin-top:5px;text-align:right}
+
+  /* LOG */
+  #log{background:#0f172a;border-radius:10px;padding:14px 16px;font-family:'Courier New',monospace;font-size:.78rem;color:#94a3b8;min-height:60px;max-height:200px;overflow-y:auto;white-space:pre-wrap;display:none;margin-top:14px}
+  .log-ok{color:#4ade80}.log-err{color:#f87171}.log-info{color:#60a5fa}
+
+  .divider{border:none;border-top:1px solid var(--gray-200);margin:20px 0}
+  .action-row{display:flex;gap:10px;align-items:center}
+  .hidden{display:none!important}
+
+  /* SPINNER */
+  .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .7s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <span class="nav-title">📄 브로슈어 관리</span>
+    <span class="nav-org">pnu-ai-center / 2026-ai-guidebook</span>
+  </div>
+  <div class="nav-user" id="nav-user">
+    <img class="nav-avatar" id="nav-avatar" src="" alt="">
+    <span class="nav-username" id="nav-username"></span>
+    <span class="nav-member-badge">조직 멤버 ✓</span>
+    <button class="btn-ghost" id="btn-logout">로그아웃</button>
+  </div>
+</nav>
+
+<!-- ──────────── LOGIN SCREEN ──────────── -->
+<div id="screen-login">
+  <div class="login-card">
+    <div class="login-icon">🔐</div>
+    <div class="login-title">브로슈어 관리 로그인</div>
+    <div class="login-sub">
+      <strong>pnu-ai-center</strong> 조직 멤버만 접근할 수 있습니다.<br>
+      본인의 GitHub Personal Access Token을 입력해주세요.
+    </div>
+
+    <div class="login-info">
+      <strong>어떤 토큰이 필요한가요?</strong><br>
+      GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens<br>
+      권한: <strong>Contents (read/write)</strong>, <strong>Members (read)</strong>
+    </div>
+
+    <div class="field">
+      <label for="input-token">Personal Access Token</label>
+      <input id="input-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off" spellcheck="false">
+      <div class="hint">
+        <a class="hint-link" href="https://github.com/settings/tokens/new?scopes=repo,read:org" target="_blank">
+          토큰 발급하러 가기 →
+        </a>
+        &nbsp;(scopes: repo, read:org)
+      </div>
+    </div>
+
+    <button class="btn btn-primary btn-full" id="btn-login">
+      연결 및 멤버 확인
+    </button>
+
+    <div class="error-box" id="login-error"></div>
+  </div>
+</div>
+
+<!-- ──────────── MAIN SCREEN ──────────── -->
+<div id="screen-main">
+  <div class="container">
+
+    <!-- 현재 파일 목록 -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">현재 docs/ 파일 목록</span>
+        <button class="btn btn-outline btn-sm" id="btn-refresh">↻ 새로고침</button>
+      </div>
+      <div id="docs-list"><span class="doc-empty">로딩 중…</span></div>
+    </div>
+
+    <!-- 파일 업로드 -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">MD 파일 업로드</span>
+      </div>
+
+      <div id="dropzone">
+        <div class="drop-icon">📂</div>
+        <div class="drop-label">여기에 .md 파일을 드래그하거나 클릭해서 선택</div>
+        <div class="drop-hint">여러 파일 동시 업로드 가능 · .md 파일만 허용</div>
+        <input type="file" id="file-input" accept=".md" multiple style="display:none">
+      </div>
+
+      <div id="file-list"></div>
+
+      <div class="progress-wrap" id="progress-wrap">
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="progress-label" id="progress-label">0 / 0</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="action-row">
+        <button class="btn btn-primary" id="btn-upload" disabled>⬆ 업로드 &amp; 배포</button>
+        <button class="btn btn-outline hidden" id="btn-clear">선택 초기화</button>
+      </div>
+
+      <div id="log"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ─── 고정 상수 ─── */
+const ORG  = 'pnu-ai-center';
+const REPO = '2026-ai-guidebook';
+const BRANCH = 'main';
+
+/* ─── 상태 ─── */
+let TOKEN = '';
+let ME = null;
+let selectedFiles = [];
+
+/* ─── API helper ─── */
+const ghFetch = (path, { headers: extraHeaders = {}, ...restOpts } = {}) =>
+  fetch(`https://api.github.com${path}`, {
+    headers: {
+      Authorization: `Bearer ${TOKEN}`,
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...extraHeaders,
+    },
+    ...restOpts,
+  });
+
+/* ─── 로그인 ─── */
+const btnLogin   = document.getElementById('btn-login');
+const loginError = document.getElementById('login-error');
+
+btnLogin.addEventListener('click', () => doLogin());
+document.getElementById('input-token').addEventListener('keydown', e => {
+  if (e.key === 'Enter') doLogin();
+});
+
+async function doLogin(savedToken = null) {
+  const raw = savedToken ?? document.getElementById('input-token').value.trim();
+  if (!raw) { showError('토큰을 입력해주세요.'); return; }
+
+  TOKEN = raw;
+  btnLogin.disabled = true;
+  btnLogin.innerHTML = '<span class="spinner"></span> 확인 중…';
+  loginError.style.display = 'none';
+
+  try {
+    /* 1) 본인 계정 정보 */
+    const userRes = await ghFetch('/user');
+    if (!userRes.ok) throw new Error(`GitHub 인증 실패 (${userRes.status}) — 토큰을 확인해주세요.`);
+    ME = await userRes.json();
+
+    /* 2) 조직 멤버 여부 확인 */
+    const memberRes = await ghFetch(`/orgs/${ORG}/members/${ME.login}`);
+    if (memberRes.status === 302 || memberRes.status === 204) {
+      /* 204 = 멤버, 302 = 공개 멤버 리다이렉트 (둘 다 OK) */
+    } else if (memberRes.status === 404) {
+      throw new Error(`@${ME.login} 계정은 ${ORG} 조직의 멤버가 아닙니다.\n조직 관리자에게 초대를 요청하세요.`);
+    } else {
+      /* 403 = 토큰에 read:org 권한 없음 */
+      throw new Error(`조직 멤버 확인 권한이 없습니다 (${memberRes.status}).\n토큰에 read:org 권한을 추가해주세요.`);
+    }
+
+    /* 3) 성공 → 토큰 저장 후 메인 화면 */
+    localStorage.setItem('pnu_admin_token', raw);
+    enterMain();
+
+  } catch (e) {
+    TOKEN = '';
+    /* 저장된 토큰이 만료됐을 경우 삭제 */
+    if (savedToken) localStorage.removeItem('pnu_admin_token');
+    showError(e.message);
+  } finally {
+    btnLogin.disabled = false;
+    btnLogin.innerHTML = '연결 및 멤버 확인';
+  }
+}
+
+/* ─── 페이지 로드 시 자동 로그인 ─── */
+(async () => {
+  const saved = localStorage.getItem('pnu_admin_token');
+  if (saved) {
+    document.getElementById('input-token').value = saved;
+    await doLogin(saved);
+  }
+})();
+
+function showError(msg) {
+  loginError.textContent = msg;
+  loginError.style.display = 'block';
+}
+
+function enterMain() {
+  document.getElementById('screen-login').style.display = 'none';
+  document.getElementById('screen-main').style.display  = 'block';
+
+  /* 네비에 사용자 표시 */
+  const navUser = document.getElementById('nav-user');
+  navUser.style.display = 'flex';
+  document.getElementById('nav-avatar').src = ME.avatar_url;
+  document.getElementById('nav-username').textContent = '@' + ME.login;
+
+  loadDocs();
+}
+
+/* ─── 로그아웃 ─── */
+document.getElementById('btn-logout').addEventListener('click', () => {
+  TOKEN = ''; ME = null; selectedFiles = [];
+  localStorage.removeItem('pnu_admin_token');
+  document.getElementById('input-token').value = '';
+  document.getElementById('screen-main').style.display = 'none';
+  document.getElementById('screen-login').style.display = 'flex';
+  document.getElementById('nav-user').style.display = 'none';
+  document.getElementById('log').style.display = 'none';
+  document.getElementById('log').innerHTML = '';
+});
+
+/* ─── 파일 목록 ─── */
+async function loadDocs() {
+  const el = document.getElementById('docs-list');
+  el.innerHTML = '<span class="doc-empty">로딩 중…</span>';
+  try {
+    const r = await ghFetch(`/repos/${ORG}/${REPO}/contents/docs`);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    const mds = data.filter(f => f.name.endsWith('.md')).sort((a,b)=>a.name.localeCompare(b.name));
+    if (!mds.length) { el.innerHTML = '<span class="doc-empty">docs/ 폴더에 .md 파일이 없습니다.</span>'; return; }
+    el.innerHTML = mds.map(f => `
+      <div class="doc-item">
+        <span class="doc-icon">📄</span>
+        <span class="doc-name">${f.name}</span>
+        <span class="doc-sha">${f.sha.slice(0,7)}</span>
+        <button class="btn btn-danger btn-sm" onclick="deleteFile('${f.name}','${f.sha}')">삭제</button>
+      </div>`).join('');
+  } catch(e) {
+    el.innerHTML = `<span style="color:var(--red);font-size:.85rem">불러오기 실패: ${e.message}</span>`;
+  }
+}
+
+document.getElementById('btn-refresh').addEventListener('click', loadDocs);
+
+/* ─── 삭제 ─── */
+window.deleteFile = async (name, sha) => {
+  if (!confirm(`"${name}" 파일을 삭제하시겠습니까?\n삭제 후 사이트가 자동 재배포됩니다.`)) return;
+  appendLog(`🗑 ${name} 삭제 중…`);
+  try {
+    const r = await ghFetch(`/repos/${ORG}/${REPO}/contents/docs/${name}`, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: `docs: remove ${name}`, sha, branch: BRANCH }),
+    });
+    if (!r.ok) { const d = await r.json(); throw new Error(d.message); }
+    appendLog(`✓ ${name} 삭제 완료`, 'ok');
+    appendLog('🚀 GitHub Actions 배포 시작됨…', 'ok');
+    setTimeout(loadDocs, 1500);
+  } catch(e) {
+    appendLog(`✗ 실패: ${e.message}`, 'err');
+  }
+};
+
+/* ─── 드롭존 ─── */
+const dropzone  = document.getElementById('dropzone');
+const fileInput = document.getElementById('file-input');
+
+dropzone.addEventListener('click', () => fileInput.click());
+dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
+dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+dropzone.addEventListener('drop', e => {
+  e.preventDefault(); dropzone.classList.remove('dragover');
+  addFiles([...e.dataTransfer.files]);
+});
+fileInput.addEventListener('change', () => addFiles([...fileInput.files]));
+
+/* ─── 파일명에서 메타 자동 추출 ─── */
+function metaFromFilename(filename) {
+  // 예) 01-intro.md → id: intro, sidebar_position: 1
+  const base = filename.replace(/\.md$/, '');
+  const match = base.match(/^(\d+)[\-_](.+)$/);
+  if (match) {
+    return {
+      id: match[2].toLowerCase().replace(/[^a-z0-9가-힣\-_]/g, '-'),
+      sidebar_position: parseInt(match[1], 10),
+    };
+  }
+  return {
+    id: base.toLowerCase().replace(/[^a-z0-9가-힣\-_]/g, '-'),
+    sidebar_position: '',
+  };
+}
+
+function addFiles(newFiles) {
+  const mds = newFiles.filter(f => f.name.endsWith('.md'));
+  if (mds.length !== newFiles.length) alert('.md 파일만 업로드할 수 있습니다.');
+  mds.forEach(f => {
+    if (!selectedFiles.find(x => x.file.name === f.name)) {
+      const auto = metaFromFilename(f.name);
+      selectedFiles.push({
+        file: f,
+        id: auto.id,
+        title: '',
+        sidebar_position: auto.sidebar_position,
+        theme: 'blue',
+        description: '',
+      });
+    }
+  });
+  renderFileList();
+}
+
+const THEMES = [
+  { value:'blue',   label:'파랑', color:'#2563eb' },
+  { value:'green',  label:'초록', color:'#16a34a' },
+  { value:'purple', label:'보라', color:'#7c3aed' },
+  { value:'orange', label:'주황', color:'#ea580c' },
+  { value:'gray',   label:'회색', color:'#6b7280' },
+];
+
+function renderFileList() {
+  const el = document.getElementById('file-list');
+  const uploadBtn = document.getElementById('btn-upload');
+  const clearBtn  = document.getElementById('btn-clear');
+
+  if (!selectedFiles.length) {
+    el.innerHTML = '';
+    dropzone.classList.remove('has-files');
+    uploadBtn.disabled = true;
+    clearBtn.classList.add('hidden');
+    return;
+  }
+  dropzone.classList.add('has-files');
+  uploadBtn.disabled = false;
+  clearBtn.classList.remove('hidden');
+
+  el.innerHTML = selectedFiles.map((item, i) => `
+    <div class="file-card" id="card-${i}">
+      <div class="file-card-header">
+        <span class="file-card-icon">📄</span>
+        <span class="file-card-name">${item.file.name}</span>
+        <span class="file-card-size">${formatBytes(item.file.size)}</span>
+        <button class="file-card-remove" onclick="removeFile(${i})">✕</button>
+      </div>
+      <div class="file-card-body">
+        <div class="field">
+          <label>제목 <span style="color:var(--red)">*</span></label>
+          <input type="text" placeholder="예) 인사말" value="${esc(item.title)}"
+            oninput="updateMeta(${i},'title',this.value)">
+        </div>
+        <div class="field">
+          <label>순서</label>
+          <input type="number" min="1" placeholder="1" value="${item.sidebar_position}"
+            oninput="updateMeta(${i},'sidebar_position',+this.value)">
+        </div>
+        <div class="field">
+          <label>ID <span style="color:var(--gray-400);font-weight:400;text-transform:none">(영문)</span></label>
+          <input type="text" placeholder="intro" value="${esc(item.id)}"
+            oninput="updateMeta(${i},'id',this.value)">
+        </div>
+        <div class="field">
+          <label>색상 테마</label>
+          <select onchange="updateMeta(${i},'theme',this.value)">
+            ${THEMES.map(t => `<option value="${t.value}" ${item.theme===t.value?'selected':''}>${t.label}</option>`).join('')}
+          </select>
+        </div>
+        <div class="field field-full">
+          <label>설명 <span style="color:var(--gray-400);font-weight:400;text-transform:none">(선택)</span></label>
+          <textarea placeholder="홈 화면 카드에 표시될 짧은 설명" oninput="updateMeta(${i},'description',this.value)">${esc(item.description)}</textarea>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function esc(s) { return String(s).replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+
+window.updateMeta = (idx, key, val) => {
+  selectedFiles[idx][key] = val;
+  // 제목이 입력되면 카드 테두리 색 변경
+  const card = document.getElementById(`card-${idx}`);
+  if (card) card.classList.toggle('ready', !!selectedFiles[idx].title);
+};
+
+window.removeFile = idx => { selectedFiles.splice(idx, 1); renderFileList(); };
+
+document.getElementById('btn-clear').addEventListener('click', () => {
+  selectedFiles = []; fileInput.value = ''; renderFileList();
+});
+
+/* ─── 업로드 ─── */
+document.getElementById('btn-upload').addEventListener('click', async () => {
+  if (!selectedFiles.length) return;
+  const btn = document.getElementById('btn-upload');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> 업로드 중…';
+
+  const pw = document.getElementById('progress-wrap');
+  const pf = document.getElementById('progress-fill');
+  const pl = document.getElementById('progress-label');
+  pw.style.display = 'block';
+  document.getElementById('log').innerHTML = '';
+
+  const total = selectedFiles.length;
+  let done = 0;
+
+  /* 제목 미입력 검사 */
+  const noTitle = selectedFiles.filter(item => !item.title.trim());
+  if (noTitle.length) {
+    alert(`제목이 비어있는 파일이 있습니다:\n${noTitle.map(x=>x.file.name).join('\n')}`);
+    btn.disabled = false;
+    btn.innerHTML = '⬆ 업로드 &amp; 배포';
+    return;
+  }
+
+  for (const item of selectedFiles) {
+    const { file, id, title, sidebar_position, theme, description } = item;
+    appendLog(`⬆ ${file.name} 업로드 중…`);
+    try {
+      /* 원본 텍스트 읽기 */
+      const originalText = await file.text();
+
+      /* 기존 frontmatter 제거 (이미 있는 경우) */
+      const stripped = originalText.replace(/^---[\s\S]*?---\s*/, '');
+
+      /* 새 frontmatter 생성 */
+      const frontmatter = [
+        '---',
+        `id: ${id || file.name.replace(/\.md$/,'').replace(/^\d+[\-_]/,'')}`,
+        `title: ${title}`,
+        sidebar_position ? `sidebar_position: ${sidebar_position}` : null,
+        `theme: ${theme}`,
+        description.trim() ? `description: "${description.trim().replace(/"/g,"'")}"` : null,
+        '---',
+        '',
+      ].filter(l => l !== null).join('\n');
+
+      /* 최종 내용 = frontmatter + 본문 */
+      const finalText = frontmatter + stripped;
+      const content = btoa(unescape(encodeURIComponent(finalText)));
+
+      /* 기존 파일 sha (덮어쓰기 시 필요) */
+      let sha;
+      const check = await ghFetch(`/repos/${ORG}/${REPO}/contents/docs/${file.name}`);
+      if (check.ok) { const d = await check.json(); sha = d.sha; }
+
+      const body = { message: `docs: upload ${file.name} (by @${ME.login})`, content, branch: BRANCH };
+      if (sha) body.sha = sha;
+
+      const r = await ghFetch(`/repos/${ORG}/${REPO}/contents/docs/${file.name}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      if (!r.ok) { const d = await r.json(); throw new Error(d.message); }
+      appendLog(`✓ ${file.name} ("${title}") 완료`, 'ok');
+    } catch(e) {
+      appendLog(`✗ ${file.name} 실패: ${e.message}`, 'err');
+    }
+    done++;
+    pf.style.width = (done / total * 100) + '%';
+    pl.textContent  = `${done} / ${total}`;
+  }
+
+  appendLog('');
+  appendLog('🚀 GitHub Actions 자동 배포 시작됨!', 'ok');
+  appendLog('   약 1~2분 후 사이트에 반영됩니다.', 'info');
+
+  selectedFiles = []; fileInput.value = ''; renderFileList();
+  btn.disabled = false;
+  btn.innerHTML = '⬆ 업로드 &amp; 배포';
+  setTimeout(loadDocs, 2000);
+});
+
+/* ─── util ─── */
+function appendLog(msg, type = 'info') {
+  const el = document.getElementById('log');
+  el.style.display = 'block';
+  const cls = type === 'ok' ? 'log-ok' : type === 'err' ? 'log-err' : 'log-info';
+  el.innerHTML += `<span class="${cls}">${msg}</span>\n`;
+  el.scrollTop = el.scrollHeight;
+}
+
+function formatBytes(b) { return b < 1024 ? b + 'B' : (b / 1024).toFixed(1) + 'KB'; }
+
+function toBase64(file) {
+  return new Promise((res, rej) => {
+    const r = new FileReader();
+    r.onload = e => res(e.target.result.split(',')[1]);
+    r.onerror = rej;
+    r.readAsDataURL(file);
+  });
+}
+</script>
+</body>
+</html>

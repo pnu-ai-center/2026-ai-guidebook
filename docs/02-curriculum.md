@@ -6,6 +6,7 @@ sidebar_position: 2
 description: AI 교육과정과 프로젝트 중심 학습 구조를 소개합니다.
 
 theme: green
+thumbnail: thumbnails/template.png
 ---
 
 <div className="brochureHero brochureHeroGreen">
@@ -37,4 +38,4 @@ AI 전문 교육과정을 소개합니다.
 
 ## 부산대학교 로고
 
-![부산대 로고](./images/pnu-logo.png)
+![부산대 로고](./images/curriculum/pnu-logo.png)

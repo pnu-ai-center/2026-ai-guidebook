@@ -2,6 +2,7 @@
 id: apply
 sidebar_position: 4
 title: 적용
+thumbnail: thumbnails/template.png
 ---
 
 # 교육과정 안내4

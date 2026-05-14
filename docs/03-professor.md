@@ -2,6 +2,7 @@
 id: professor
 sidebar_position: 3
 title: 교수
+thumbnail: thumbnails/template.png
 ---
 
 # 교육과정 안내3

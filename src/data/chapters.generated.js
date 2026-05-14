@@ -1,10 +1,11 @@
 
-const chapters = [
+const chapters =
+[
   {
     "id": "intro",
     "title": "인사말",
     "description": "",
-    "theme": "blue",
+    "theme": "gray",
     "link": "/docs/intro",
     "sidebar_position": 1
   },
@@ -20,7 +21,7 @@ const chapters = [
     "id": "professor",
     "title": "교수",
     "description": "",
-    "theme": "blue",
+    "theme": "gray",
     "link": "/docs/professor",
     "sidebar_position": 3
   },
@@ -28,7 +29,7 @@ const chapters = [
     "id": "apply",
     "title": "적용",
     "description": "",
-    "theme": "blue",
+    "theme": "gray",
     "link": "/docs/apply",
     "sidebar_position": 4
   },
@@ -39,6 +40,14 @@ const chapters = [
     "theme": "orange",
     "link": "/docs/support",
     "sidebar_position": 5
+  },
+  {
+    "id": "template",
+    "title": "템플릿",
+    "description": "AI 교육과정과 프로젝트 중심 학습 구조를 소개합니다.",
+    "theme": "gray",
+    "link": "/docs/template",
+    "sidebar_position": 6
   }
 ];
 
