@@ -262,3 +262,76 @@ body {
 .brochureHeroPurple {
   background: linear-gradient(135deg, #7c3aed, #8b5cf6);
 }
+
+/* =========================
+   PDF / PRINT SYSTEM
+========================= */
+
+@media print {
+  /* 웹 UI 제거 */
+
+  .navbar,
+  .footer,
+  .theme-doc-sidebar-container,
+  .table-of-contents,
+  button {
+    display: none !important;
+  }
+
+  /* 전체 배경 제거 */
+
+  body {
+    background: white;
+  }
+
+  /* 문서 영역 최적화 */
+
+  .theme-doc-markdown {
+    border: none;
+
+    box-shadow: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    max-width: 100%;
+  }
+
+  /* Hero 단순화 */
+
+  .brochureHero {
+    background: none;
+
+    padding: 0;
+
+    margin-bottom: 48px;
+  }
+
+  /* 이미지 페이지 넘김 방지 */
+
+  img {
+    break-inside: avoid;
+  }
+
+  /* 제목 잘림 방지 */
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  /* 문단 잘림 방지 */
+
+  p,
+  li {
+    break-inside: avoid;
+  }
+
+  /* 페이지 여백 */
+
+  @page {
+    margin: 20mm;
+  }
+}

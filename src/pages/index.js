@@ -1,59 +1,34 @@
 import React from "react";
+
 import Layout from "@theme/Layout";
+
 import Link from "@docusaurus/Link";
 
-const chapters = [
-  {
-    title: "인사말",
-    description: "부산대학교 AI융합교육원의 비전과 교육 목표를 소개합니다.",
-    link: "/docs/intro",
-  },
-
-  {
-    title: "교육과정",
-    description: "AI 교육과정과 프로젝트 중심 학습 구조를 안내합니다.",
-    link: "/docs/curriculum",
-  },
-
-  {
-    title: "교수진",
-    description: "교육과 연구를 담당하는 교수진과 협력 체계를 소개합니다.",
-    link: "/docs/professor",
-  },
-
-  {
-    title: "지원안내",
-    description: "교육 신청 절차와 지원 방법을 안내합니다.",
-    link: "/docs/apply",
-  },
-];
+import chapters from "../data/chapters.generated";
 
 export default function Home() {
   return (
     <Layout title="2026 AI 교육 안내서">
       <main
         style={{
-          padding: "80px 20px",
-          maxWidth: "1400px",
+          maxWidth: "1200px",
           margin: "0 auto",
+          padding: "100px 24px 120px",
         }}
       >
         {/* Hero */}
 
         <section
           style={{
-            background: "linear-gradient(135deg,#1d4ed8,#2563eb)",
-            borderRadius: "40px",
-            padding: "100px 70px",
-            color: "white",
-            marginBottom: "80px",
+            marginBottom: "100px",
           }}
         >
           <p
             style={{
+              fontSize: "0.95rem",
               fontWeight: "700",
+              color: "#2563eb",
               marginBottom: "20px",
-              opacity: 0.9,
             }}
           >
             부산대학교 AI융합교육원
@@ -63,7 +38,9 @@ export default function Home() {
             style={{
               fontSize: "4.5rem",
               fontWeight: "800",
-              lineHeight: "1.2",
+              lineHeight: "1.15",
+              letterSpacing: "-0.03em",
+              color: "#111827",
               marginBottom: "32px",
             }}
           >
@@ -72,41 +49,30 @@ export default function Home() {
 
           <p
             style={{
-              fontSize: "1.2rem",
+              fontSize: "1.15rem",
               lineHeight: "2",
+              color: "#4b5563",
               maxWidth: "760px",
-              opacity: 0.92,
             }}
           >
-            부산대학교 AI융합교육원의 교육 비전과 커리큘럼, 교수진 및 지원
+            부산대학교 AI융합교육원의 교육 비전과 교육과정, 교수진 및 지원
             절차를 온라인 브로슈어 형태로 제공합니다.
           </p>
         </section>
 
-        {/* Chapter Cards */}
+        {/* Chapter Grid */}
 
         <section>
-          <h2
-            style={{
-              fontSize: "2rem",
-              fontWeight: "800",
-              marginBottom: "32px",
-              color: "#111827",
-            }}
-          >
-            브로슈어 목차
-          </h2>
-
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "28px",
+              gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+              gap: "24px",
             }}
           >
             {chapters.map((chapter) => (
               <Link
-                key={chapter.title}
+                key={chapter.id}
                 to={chapter.link}
                 style={{
                   textDecoration: "none",
@@ -115,23 +81,33 @@ export default function Home() {
                 <div
                   style={{
                     background: "white",
-                    borderRadius: "28px",
+                    border: "1px solid #e5e7eb",
+                    borderRadius: "24px",
                     padding: "36px",
                     height: "100%",
-                    boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
                     transition: "all 0.2s ease",
                   }}
                 >
-                  <h3
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "4px",
+                      background: "#2563eb",
+                      borderRadius: "999px",
+                      marginBottom: "24px",
+                    }}
+                  />
+
+                  <h2
                     style={{
                       fontSize: "1.5rem",
                       fontWeight: "800",
-                      marginBottom: "20px",
+                      marginBottom: "18px",
                       color: "#111827",
                     }}
                   >
                     {chapter.title}
-                  </h3>
+                  </h2>
 
                   <p
                     style={{

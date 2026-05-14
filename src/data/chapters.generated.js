@@ -1,0 +1,45 @@
+
+const chapters = [
+  {
+    "id": "intro",
+    "title": "인사말",
+    "description": "",
+    "theme": "blue",
+    "link": "/docs/intro",
+    "sidebar_position": 1
+  },
+  {
+    "id": "curriculum",
+    "title": "교육과정",
+    "description": "AI 교육과정과 프로젝트 중심 학습 구조를 소개합니다.",
+    "theme": "green",
+    "link": "/docs/curriculum",
+    "sidebar_position": 2
+  },
+  {
+    "id": "professor",
+    "title": "교수",
+    "description": "",
+    "theme": "blue",
+    "link": "/docs/professor",
+    "sidebar_position": 3
+  },
+  {
+    "id": "apply",
+    "title": "적용",
+    "description": "",
+    "theme": "blue",
+    "link": "/docs/apply",
+    "sidebar_position": 4
+  },
+  {
+    "id": "support",
+    "title": "지원혜택",
+    "description": "교육생 지원 혜택을 소개합니다.",
+    "theme": "orange",
+    "link": "/docs/support",
+    "sidebar_position": 5
+  }
+];
+
+export default chapters;
