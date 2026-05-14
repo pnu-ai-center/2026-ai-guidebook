@@ -72,24 +72,10 @@ const config = {
 
       items: [
         {
-          to: "/docs/intro",
-          label: "인사말",
-          position: "right",
-        },
-        {
-          to: "/docs/curriculum",
-          label: "교육과정",
-          position: "right",
-        },
-        {
-          to: "/docs/professor",
-          label: "교수진",
-          position: "right",
-        },
-        {
-          to: "/docs/apply",
-          label: "지원안내",
-          position: "right",
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "브로슈어",
         },
       ],
     },

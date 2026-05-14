@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap");
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -32,15 +34,100 @@
   background: #f5f5f5;
 }
 
-.theme-doc-markdown {
-  background: white;
-  max-width: 900px;
-  margin: auto;
-  padding: 48px;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+/* 전체 배경 */
+
+body {
+  background: #f3f4f6;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
+/* 메인 콘텐츠 영역 */
+
+.theme-doc-markdown {
+  background: white;
+
+  max-width: 960px;
+
+  margin: 40px auto;
+
+  padding: 64px;
+
+  border-radius: 24px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 네비게이션 바 */
+
 .navbar {
-  border-bottom: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* 사이드바 */
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* 제목 */
+
+.markdown h1 {
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  margin-bottom: 2rem;
+
+  color: #111827;
+}
+
+/* 소제목 */
+
+.markdown h2 {
+  margin-top: 4rem;
+
+  margin-bottom: 1rem;
+
+  font-size: 2rem;
+
+  border-left: 6px solid #1d4ed8;
+
+  padding-left: 1rem;
+
+  color: #1f2937;
+}
+
+/* 본문 */
+
+.markdown p,
+.markdown li {
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  color: #374151;
+}
+
+/* 버튼 */
+
+.button--primary {
+  background: #1d4ed8;
+
+  border: none;
+
+  border-radius: 9999px;
+
+  padding: 0.9rem 1.8rem;
+
+  font-weight: 700;
+}
+
+/* 푸터 */
+
+.footer {
+  border-top: 1px solid #e5e7eb;
 }
