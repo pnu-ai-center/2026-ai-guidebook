@@ -2,9 +2,13 @@
 id: curriculum
 title: 교육과정
 sidebar_position: 2
+
+description: AI 교육과정과 프로젝트 중심 학습 구조를 소개합니다.
+
+theme: green
 ---
 
-<div className="brochureHero">
+<div className="brochureHero brochureHeroGreen">
 
 <h1>교육과정 안내</h1>
 

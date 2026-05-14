@@ -250,3 +250,15 @@ body {
     break-inside: avoid;
   }
 }
+
+.brochureHeroGreen {
+  background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.brochureHeroOrange {
+  background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+.brochureHeroPurple {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+}
