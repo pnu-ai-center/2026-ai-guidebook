@@ -7,7 +7,7 @@ export default function Home() {
     <Layout title="2026 AI 교육 안내서">
       <main
         style={{
-          minHeight: "80vh",
+          minHeight: "90vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -18,9 +18,9 @@ export default function Home() {
           style={{
             background: "white",
             padding: "80px",
-            borderRadius: "32px",
+            borderRadius: "36px",
             boxShadow: "0 10px 40px rgba(0,0,0,0.08)",
-            maxWidth: "900px",
+            maxWidth: "980px",
             width: "100%",
             textAlign: "center",
           }}
@@ -29,7 +29,8 @@ export default function Home() {
             style={{
               color: "#2563eb",
               fontWeight: "700",
-              marginBottom: "16px",
+              marginBottom: "20px",
+              fontSize: "1rem",
             }}
           >
             부산대학교 AI융합교육원
@@ -37,9 +38,11 @@ export default function Home() {
 
           <h1
             style={{
-              fontSize: "4rem",
+              fontSize: "4.5rem",
               fontWeight: "800",
-              marginBottom: "24px",
+              lineHeight: "1.2",
+              marginBottom: "28px",
+              color: "#111827",
             }}
           >
             2026 AI 교육 안내서
@@ -48,9 +51,10 @@ export default function Home() {
           <p
             style={{
               fontSize: "1.2rem",
-              lineHeight: "1.8",
+              lineHeight: "2",
               color: "#4b5563",
-              marginBottom: "48px",
+              maxWidth: "700px",
+              margin: "0 auto 48px",
             }}
           >
             부산대학교 AI융합교육원의 교육 과정과 비전을 소개하는 온라인
