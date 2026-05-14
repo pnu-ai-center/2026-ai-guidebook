@@ -1,166 +1,122 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "2026 AI 교육 안내서",
+
+  tagline: "부산대학교 AI융합교육원 온라인 브로슈어",
+
   favicon: "img/favicon.ico",
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  // GitHub Pages URL
+  url: "https://pnu-ai-center.github.io",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  // Repository name
+  baseUrl: "/2026-ai-guidebook/",
+
+  // GitHub Pages deployment config
+  organizationName: "pnu-ai-center",
+
+  projectName: "2026-ai-guidebook",
 
   onBrokenLinks: "throw",
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "ko",
+    locales: ["ko"],
   },
 
   presets: [
     [
       "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: "./sidebars.js",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/pnu-ai-center/2026-ai-guidebook/tree/main/",
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-        },
+
+        // blog 제거 가능
+        blog: false,
+
         theme: {
           customCss: "./src/css/custom.css",
         },
-      }),
+      },
     ],
   ],
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
-      colorMode: {
-        respectPrefersColorScheme: true,
+  themeConfig: {
+    image: "img/docusaurus-social-card.jpg",
+
+    colorMode: {
+      defaultMode: "light",
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+
+    navbar: {
+      title: "AI융합교육원",
+
+      logo: {
+        alt: "PNU Logo",
+        src: "img/pnu-logo.png",
       },
-      navbar: {
-        title: "AI융합교육원",
-        logo: {
-          alt: "PNU Logo",
-          src: "img/pnu-logo.png",
+
+      items: [
+        {
+          to: "/docs/intro",
+          label: "인사말",
+          position: "right",
         },
-        items: [
-          {
-            to: "/docs/intro",
-            label: "인사말",
-            position: "right",
-          },
-          {
-            to: "/docs/curriculum",
-            label: "교육과정",
-            position: "right",
-          },
-          {
-            to: "/docs/professor",
-            label: "교수진",
-            position: "right",
-          },
-          {
-            to: "/docs/apply",
-            label: "지원안내",
-            position: "right",
-          },
-        ],
-      },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "X",
-                href: "https://x.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+        {
+          to: "/docs/curriculum",
+          label: "교육과정",
+          position: "right",
+        },
+        {
+          to: "/docs/professor",
+          label: "교수진",
+          position: "right",
+        },
+        {
+          to: "/docs/apply",
+          label: "지원안내",
+          position: "right",
+        },
+      ],
+    },
+
+    footer: {
+      style: "light",
+
+      links: [
+        {
+          title: "AI융합교육원",
+          items: [
+            {
+              label: "브로슈어 홈",
+              to: "/docs/intro",
+            },
+          ],
+        },
+      ],
+
+      copyright: `Copyright © ${new Date().getFullYear()} 부산대학교 AI융합교육원`,
+    },
+
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  },
 };
 
 export default config;
