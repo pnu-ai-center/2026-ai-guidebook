@@ -20,12 +20,24 @@
 - **CI/CD & Hosting**: GitHub Actions, GitHub Pages
 - **Styling**: Custom CSS, Infima (Docusaurus 기본 테마 엔진)
 
-## 3. 시스템 동작 아키텍처
+## 3. 시스템 구성 및 아키텍처 (매우 중요)
 
-1. **템플릿 레포지토리 활용**: 본 레포지토리(`2026-ai-guidebook`)는 GitHub Template으로 설정되어 있습니다. 새로운 브로슈어 생성 시 이 템플릿을 복제하여 사용합니다.
-2. **동적 환경 설정**: `docusaurus.config.js`가 빌드 시 `GITHUB_REPOSITORY` 환경 변수를 인식하여 `baseUrl`과 `projectName`을 자동으로 설정하므로, 레포지토리 이름이 변경되어도 코드를 수정할 필요가 없습니다.
-3. **Admin UI 통신**: 관리자 페이지(`static/admin/index.html`)는 사용자의 GitHub Personal Access Token(PAT)을 이용하여 브라우저 상에서 직접 GitHub API와 통신합니다. 서버 릴레이 없이 파일 업로드, 수정, 삭제가 즉시 커밋됩니다.
-4. **자동 배포 파이프라인**: Admin UI를 통해 파일이 커밋되면 GitHub Actions가 이를 감지하여 Docusaurus 빌드를 수행하고, 결과물을 `gh-pages` 브랜치에 배포하여 최종 웹사이트를 갱신합니다.
+본 프로젝트는 단일 레포지토리가 아닌 **세 가지 분리된 역할의 레포지토리 그룹**으로 동작합니다.
+
+1. **`hub-page` (통합 허브 홈페이지)**
+   - 역할: 조직(`pnu-ai-center.github.io`)의 메인 첫 화면이자 현관문 역할을 합니다.
+   - 기능: 산하에 있는 모든 브로슈어 레포지토리들을 카드 형태로 보여주고 연결해 주는 허브(Hub) 페이지입니다.
+2. **`2026-ai-guidebook` (개발용 메인 레포지토리)**
+   - 역할: 새로운 기능 추가, 컴포넌트 개발, UI/UX 개선을 테스트하는 **개발 전용(Dev) 환경**입니다.
+3. **`template` (실제 배포용 템플릿 레포지토리)**
+   - 역할: 실무자가 새로운 브로슈어를 만들 때 복제(Branch out)하는 **순수한 템플릿 레포지토리**입니다. 개발 레포지토리에서 안정성이 검증된 코드만 이 템플릿에 반영됩니다.
+
+### 동작 프로세스
+1. 새로운 브로슈어가 필요하면 GitHub에서 `template` 레포지토리를 **Use this template** 버튼을 눌러 새 레포지토리로 생성합니다.
+2. `docusaurus.config.js`가 빌드 시 `GITHUB_REPOSITORY` 환경 변수를 인식하여 `baseUrl`과 `projectName`을 자동으로 설정하므로, 레포지토리 이름이 변경되어도 추가 설정이 필요 없습니다.
+3. 관리자 페이지(`admin/index.html`)에서 타겟 레포지토리 이름을 새로 만든 레포지토리로 지정하고, GitHub API를 통해 마크다운 파일을 바로 업로드합니다.
+4. 파일이 커밋되면 GitHub Actions가 이를 감지하여 Docusaurus 빌드를 수행하고, 결과물을 `gh-pages` 브랜치에 자동 배포합니다.
+5. 새로 만들어진 브로슈어의 링크를 `hub-page`에 등록하여 메인 화면에 노출시킵니다.
 
 ## 4. 주요 디렉토리 구조
 
