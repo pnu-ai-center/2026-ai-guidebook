@@ -207,7 +207,7 @@
     <!-- 대상 레포지토리 설정 -->
     <div class="section" style="padding: 20px 32px;">
       <div class="section-header" style="margin-bottom:12px">
-        <span class="section-title">대상 레포지토리 (pnu-ai-center 소속)</span>
+        <span class="section-title">대상 레포지토리 (GitHub 소속)</span>
       </div>
       <div style="display:flex;gap:10px;align-items:center;">
         <input type="text" id="input-repo-name" value="2026-ai-guidebook" style="flex:1;" placeholder="예: 2026-ai-guidebook">
@@ -298,7 +298,10 @@
 
 <script>
 /* ─── 고정 상수 및 동적 변수 ─── */
-const ORG  = 'pnu-ai-center';
+/* ─── 고정 상수 및 동적 변수 ─── */
+const ORG = window.location.hostname.includes('github.io') 
+  ? window.location.hostname.split('.')[0] 
+  : (localStorage.getItem('pnu_admin_org') || 'pnuai');
 let REPO = localStorage.getItem('pnu_admin_repo') || '2026-ai-guidebook';
 const BRANCH = 'main';
 
