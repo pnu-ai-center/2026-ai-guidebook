@@ -48,6 +48,22 @@ const chapters =
     "theme": "gray",
     "link": "/docs/template",
     "sidebar_position": 6
+  },
+  {
+    "id": "wow",
+    "title": "와우",
+    "description": "",
+    "theme": "gray",
+    "link": "/docs/wow",
+    "sidebar_position": 7
+  },
+  {
+    "id": "example-upload",
+    "title": "예시입니다.",
+    "description": "예시입니다.",
+    "theme": "blue",
+    "link": "/docs/example-upload",
+    "sidebar_position": 8
   }
 ];
 

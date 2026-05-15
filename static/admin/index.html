@@ -141,7 +141,7 @@
 <nav>
   <div class="nav-left">
     <span class="nav-title">📄 브로슈어 관리</span>
-    <span class="nav-org">pnu-ai-center / 2026-ai-guidebook</span>
+    <span class="nav-org" id="nav-repo-display">pnu-ai-center / 2026-ai-guidebook</span>
   </div>
   <div class="nav-user" id="nav-user">
     <img class="nav-avatar" id="nav-avatar" src="" alt="">
@@ -190,6 +190,20 @@
 <div id="screen-main">
   <div class="container">
 
+    <!-- 대상 레포지토리 설정 -->
+    <div class="section" style="padding: 20px 32px;">
+      <div class="section-header" style="margin-bottom:12px">
+        <span class="section-title">대상 레포지토리 (pnu-ai-center 소속)</span>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <input type="text" id="input-repo-name" value="2026-ai-guidebook" style="flex:1;" placeholder="예: 2026-ai-guidebook">
+        <button class="btn btn-primary" id="btn-change-repo">변경 적용</button>
+      </div>
+      <div class="hint" style="margin-top:8px">
+        새 브로슈어를 만들려면 GitHub에서 레포지토리를 복제/생성한 뒤 이름을 입력하세요.
+      </div>
+    </div>
+
     <!-- 현재 파일 목록 -->
     <div class="section">
       <div class="section-header">
@@ -233,9 +247,9 @@
 </div>
 
 <script>
-/* ─── 고정 상수 ─── */
+/* ─── 고정 상수 및 동적 변수 ─── */
 const ORG  = 'pnu-ai-center';
-const REPO = '2026-ai-guidebook';
+let REPO = localStorage.getItem('pnu_admin_repo') || '2026-ai-guidebook';
 const BRANCH = 'main';
 
 /* ─── 상태 ─── */
@@ -329,8 +343,22 @@ function enterMain() {
   document.getElementById('nav-avatar').src = ME.avatar_url;
   document.getElementById('nav-username').textContent = '@' + ME.login;
 
+  updateRepoUI();
+}
+
+function updateRepoUI() {
+  document.getElementById('nav-repo-display').textContent = `${ORG} / ${REPO}`;
+  document.getElementById('input-repo-name').value = REPO;
   loadDocs();
 }
+
+document.getElementById('btn-change-repo').addEventListener('click', () => {
+  const newRepo = document.getElementById('input-repo-name').value.trim();
+  if (!newRepo) { alert('레포지토리 이름을 입력해주세요.'); return; }
+  REPO = newRepo;
+  localStorage.setItem('pnu_admin_repo', REPO);
+  updateRepoUI();
+});
 
 /* ─── 로그아웃 ─── */
 document.getElementById('btn-logout').addEventListener('click', () => {
@@ -362,7 +390,11 @@ async function loadDocs() {
         <button class="btn btn-danger btn-sm" onclick="deleteFile('${f.name}','${f.sha}')">삭제</button>
       </div>`).join('');
   } catch(e) {
-    el.innerHTML = `<span style="color:var(--red);font-size:.85rem">불러오기 실패: ${e.message}</span>`;
+    if (e.message.includes('404')) {
+      el.innerHTML = `<span style="color:var(--gray-500);font-size:.85rem">⚠️ 레포지토리가 존재하지 않거나, 아직 파일이 하나도 없습니다.<br>GitHub에서 템플릿으로 레포지토리를 생성한 후 시도해주세요.</span>`;
+    } else {
+      el.innerHTML = `<span style="color:var(--red);font-size:.85rem">불러오기 실패: ${e.message}</span>`;
+    }
   }
 }
 
