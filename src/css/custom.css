@@ -577,8 +577,15 @@ main .col--3 {
   }
 }
 
-/* 마크다운 기본 헤딩 숨기기 (TOC용으로만 사용) */
+/* 마크다운 기본 헤딩 숨기기 (TOC용으로만 사용하되, 앵커 이동이 가능하도록 유지) */
 .theme-doc-markdown > h2,
 .theme-doc-markdown > h3 {
-  display: none !important;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
 }
