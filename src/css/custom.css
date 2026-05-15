@@ -649,6 +649,42 @@ main .col--3 {
   }
 }
 
+/* =========================================
+   페이지 하단 편집 버튼 (Edit this page) 디자인 업그레이드
+   ========================================= */
+.theme-edit-this-page {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--navy-light) 0%, var(--blue) 100%);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(26, 79, 160, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-top: 30px;
+}
+
+.theme-edit-this-page svg {
+  fill: currentColor;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.theme-edit-this-page:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(26, 79, 160, 0.4);
+  background: linear-gradient(135deg, var(--blue) 0%, #2563eb 100%);
+}
+
+.theme-edit-this-page:hover svg {
+  transform: rotate(15deg) scale(1.1);
+}
+
 /* 마크다운 기본 헤딩 숨기기 (TOC 스크롤 인식 및 앵커 이동을 완벽하게 지원하는 방식) */
 .theme-doc-markdown > h2,
 .theme-doc-markdown > h3 {
