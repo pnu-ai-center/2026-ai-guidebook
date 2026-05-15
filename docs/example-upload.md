@@ -1,7 +1,7 @@
 ---
 id: example-upload
 title: 예시입니다.
-sidebar_position: 8
+sidebar_position: 7
 theme: blue
 description: "예시입니다."
 ---
