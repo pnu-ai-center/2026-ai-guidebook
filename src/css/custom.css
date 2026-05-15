@@ -126,21 +126,10 @@ div[class*="docItemContainer_"] {
   box-shadow: 0 12px 40px rgba(0,0,0,0.18);
   padding: 12px;
   border: 1px solid #e2e8f0;
-  margin-top: 14px;
+  margin-top: 2px; /* 간격을 최소화하여 마우스가 빠져나갈 틈을 원천 차단 */
   min-width: 300px;
   animation: dropdownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   transform-origin: top;
-}
-
-/* 마우스가 버튼에서 메뉴로 이동할 때 틈(Gap)으로 인해 메뉴가 닫히는 현상 방지용 투명 다리 */
-.dropdown__menu::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 0;
-  right: 0;
-  height: 20px;
-  background: transparent;
 }
 
 @keyframes dropdownFade {
@@ -179,6 +168,10 @@ div[class*="docItemContainer_"] {
 }
 
 /* 로고 */
+.navbar__logo {
+  margin-right: 12px; /* 로고와 타이틀 사이 간격 추가 */
+}
+
 .navbar__logo img {
   height: 36px;
   border-radius: 8px;
