@@ -3,6 +3,13 @@
 :root {
   --ifm-color-primary: #1a4fa0;
   --ifm-font-family-base: "Noto Sans KR", sans-serif;
+  
+  /* 정보 밀도 증가(스크롤 최소화)를 위한 전역 폰트 및 줄간격 축소 */
+  --ifm-font-size-base: 14.5px;
+  --ifm-line-height-base: 1.55;
+  --ifm-heading-margin-bottom: 0.8rem;
+  --ifm-paragraph-margin-bottom: 0.8rem;
+
   --navy: #0a2463;
   --navy-light: #1e3a8a; /* 기존 navy보다 약간 밝은 색상 */
   --blue: #1a4fa0;
@@ -33,7 +40,7 @@ body {
   background: white;
   width: 100%;
   max-width: 100%;
-  padding: 48px;
+  padding: 32px 40px; /* 기존 48px에서 상하 여백을 줄여 정보량 증가 */
   border-radius: 16px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
