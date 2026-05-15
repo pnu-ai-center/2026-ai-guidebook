@@ -39,11 +39,21 @@ body {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
 }
 
-/* 컬럼 및 본문 확장 보장 (줄바꿈 방지) */
+/* 컬럼 및 본문 확장 보장 (줄바꿈 방지 및 우측 여백 제거) */
+main,
+main.docMainContainer_gT6v,
+main[class*="docMainContainer_"] {
+  flex-grow: 1 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 main .row {
   display: flex;
   flex-wrap: nowrap !important; /* 강제로 한 줄에 배치 */
   gap: 32px;
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 /* 본문 영역은 남은 공간만 꽉 채우도록 설정 */
@@ -52,7 +62,7 @@ div[class*="docItemCol_"],
 div[class*="docItemContainer_"] {
   flex: 1 1 0% !important;
   max-width: 100% !important;
-  width: auto !important;
+  width: 100% !important;
 }
 
 /* 네비게이션 바 */
