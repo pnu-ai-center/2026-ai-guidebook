@@ -99,7 +99,7 @@ const config = {
 
       logo: {
         alt: "PNU Logo",
-        src: "img/pnu-logo.png",
+        src: "img/logo.jpg",
       },
 
       items: [
