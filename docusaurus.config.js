@@ -24,7 +24,6 @@ function getDynamicNavItems() {
     return {
       to: '/docs/' + id,
       label: title,
-      position: 'left',
     };
   });
 }
