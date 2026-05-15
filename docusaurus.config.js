@@ -1,6 +1,33 @@
 // @ts-check
 
 import { themes as prismThemes } from "prism-react-renderer";
+import fs from 'fs';
+import path from 'path';
+
+// docs 폴더의 파일들을 읽어서 동적으로 네비게이션 탭으로 만듭니다.
+function getDynamicNavItems() {
+  const docsDir = path.join(process.cwd(), 'docs');
+  if (!fs.existsSync(docsDir)) return [];
+  
+  const files = fs.readdirSync(docsDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
+  
+  // 정렬을 위해 파일명(예: 01-intro.md)을 기준으로 정렬
+  files.sort();
+
+  return files.map(file => {
+    const content = fs.readFileSync(path.join(docsDir, file), 'utf8');
+    const titleMatch = content.match(/title:\s*"?([^"\n]+)"?/);
+    const title = titleMatch ? titleMatch[1] : file.replace('.md', '');
+    const idMatch = content.match(/id:\s*"?([^"\n]+)"?/);
+    const id = idMatch ? idMatch[1] : file.replace('.md', '');
+    
+    return {
+      to: '/docs/' + id,
+      label: title,
+      position: 'right',
+    };
+  });
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -70,16 +97,11 @@ const config = {
       },
 
       items: [
+        ...getDynamicNavItems(),
         {
           href: "https://pnu-ai-center.github.io",
           position: "right",
           label: "허브 홈으로",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "right",
-          label: "브로슈어 보기",
         },
       ],
     },

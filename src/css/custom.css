@@ -73,16 +73,25 @@ body {
   border-radius: 7px;
 }
 
-/* 사이드바 컨테이너 (투명 배경) */
+/* =========================================
+   사이드바 및 목차(TOC) 레이아웃 변경 
+   ========================================= */
 
-.theme-doc-sidebar-container {
-  border-right: none !important;
-  background: transparent !important;
+/* 기본 문서 목록 사이드바 숨기기 */
+aside.theme-doc-sidebar-container {
+  display: none !important;
 }
 
-/* 사이드바 메뉴 블록 (참조 사이트 .sidebar 스타일 적용) */
+/* 본문 레이아웃에서 목차(TOC)를 왼쪽으로 이동 */
+main .row {
+  display: flex;
+}
+main .col--3 {
+  order: -1; /* 목차를 제일 왼쪽으로 보냄 */
+}
 
-.theme-doc-sidebar-menu {
+/* 목차(TOC) 블록 디자인 (참조 사이트 .sidebar 스타일 적용) */
+.theme-doc-toc-desktop {
   background: #ffffff;
   border-radius: 12px;
   padding: 16px 8px;
@@ -91,28 +100,34 @@ body {
   top: 90px; /* 네비게이션바 아래로 고정 */
 }
 
-/* 사이드바 링크 아이템 */
-
-.menu__link {
+/* 목차 링크 아이템 디자인 */
+.table-of-contents__link {
   font-size: 13px;
   padding: 8px 12px;
   border-radius: 8px;
   color: #64748b;
   border-left: 3px solid transparent;
   margin-bottom: 2px;
+  display: block;
   transition: all 0.2s ease;
 }
 
-.menu__link:hover {
+.table-of-contents__link:hover {
   background: rgba(37, 99, 235, 0.06);
   color: var(--blue);
+  text-decoration: none;
 }
 
-.menu__link.menu__link--active {
+.table-of-contents__link--active {
   background: var(--pale);
   color: var(--blue);
   border-left-color: var(--mid);
   font-weight: 700;
+}
+
+/* 안쪽 목차(하위 헤딩) 들여쓰기 조정 */
+.table-of-contents ul {
+  padding-left: 10px;
 }
 
 /* 제목 */
