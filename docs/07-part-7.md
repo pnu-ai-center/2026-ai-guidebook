@@ -1,6 +1,6 @@
 ---
 id: part-7
-title: "부산대학교 SW중심대학 — 성과확산 및 인재기반 조성"
+title: "성과확산 및 인재기반 조성"
 sidebar_position: 7
 ---
 
@@ -220,6 +220,10 @@ sidebar_position: 7
 </div>
 
 
+
+
+## AI·SW 저변확대 — 연계 대상별 추진 계획
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>AI·SW 저변확대 — 연계 대상별 추진 계획</h2></div>
   <div class="expand-grid">
@@ -288,6 +292,10 @@ sidebar_position: 7
 <hr class="divider"/>
 
 
+
+
+## 주요 저변확대 성과 하이라이트
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>주요 저변확대 성과 하이라이트</h2></div>
   <div class="highlight-grid">
@@ -320,6 +328,10 @@ sidebar_position: 7
 
 <hr class="divider"/>
 
+
+
+
+## 전주기적 창업 확산 전략 — PSS+X 5단계
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>전주기적 창업 확산 전략 — PSS+X 5단계</h2></div>
@@ -412,6 +424,10 @@ sidebar_position: 7
 <hr class="divider"/>
 
 
+
+
+## PSS+X 창업지원 체계 — 주관 기관별 역할
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>PSS+X 창업지원 체계 — 주관 기관별 역할</h2></div>
   <div class="pss-grid">
@@ -435,6 +451,10 @@ sidebar_position: 7
 
 <hr class="divider"/>
 
+
+
+
+## 대학간 AI·SW인재 양성 협력 주요 성과
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>대학간 AI·SW인재 양성 협력 주요 성과</h2></div>
@@ -465,6 +485,10 @@ sidebar_position: 7
 <hr class="divider"/>
 
 
+
+
+## 고교 AI·SW교육 확대 기여 방안
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">06</div><h2>고교 AI·SW교육 확대 기여 방안</h2></div>
   <div class="highschool-grid">
@@ -493,6 +517,10 @@ sidebar_position: 7
 
 <hr class="divider"/>
 
+
+
+
+## 자립화 방안 확립
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">07</div><h2>자립화 방안 확립</h2></div>

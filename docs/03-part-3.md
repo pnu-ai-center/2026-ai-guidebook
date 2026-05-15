@@ -1,6 +1,6 @@
 ---
 id: part-3
-title: "부산대학교 SW중심대학 — 대학의 자율적인 교육혁신"
+title: "대학의 자율적인 교육혁신"
 sidebar_position: 3
 ---
 
@@ -271,6 +271,10 @@ sidebar_position: 3
 </div>
 
 
+
+
+## 4대 추진 방향
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>4대 추진 방향</h2></div>
   <div class="pillar-grid">
@@ -316,6 +320,10 @@ sidebar_position: 3
 <hr class="divider"/>
 
 
+
+
+## 부산대–경북대 인공지능 공동학과 (전국 최초)
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>부산대–경북대 인공지능 공동학과 (전국 최초)</h2></div>
   <div class="joint-box au">
@@ -341,6 +349,10 @@ sidebar_position: 3
 
 <hr class="divider"/>
 
+
+
+
+## 8개 AI·SW 전공 특화 트랙
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>8개 AI·SW 전공 특화 트랙</h2></div>
@@ -399,6 +411,10 @@ sidebar_position: 3
 <hr class="divider"/>
 
 
+
+
+## SMART-PNU SW 교육혁신모델 — AI·SW 전공 교육체계 개선
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>SMART-PNU SW 교육혁신모델 — AI·SW 전공 교육체계 개선</h2></div>
   <div class="smart-list">
@@ -431,6 +447,10 @@ sidebar_position: 3
 
 <hr class="divider"/>
 
+
+
+
+## 교육혁신 노력 — 융합교육 혁신 4방향
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>교육혁신 노력 — 융합교육 혁신 4방향</h2></div>

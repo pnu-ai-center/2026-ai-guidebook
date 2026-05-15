@@ -1,6 +1,6 @@
 ---
 id: part-8
-title: "부산대학교 SW중심대학 — 대학 일반 현황"
+title: "대학 일반 현황"
 sidebar_position: 8
 ---
 
@@ -207,6 +207,10 @@ sidebar_position: 8
 </div>
 
 
+
+
+## AI·SW 학과 구조 및 모집 정원
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>AI·SW 학과 구조 및 모집 정원</h2></div>
   <div class="dept-structure">
@@ -270,6 +274,10 @@ sidebar_position: 8
 <hr class="divider"/>
 
 
+
+
+## AI·SW학과 모집 정원 현황
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>AI·SW학과 모집 정원 현황</h2></div>
   <div class="quota-chart au">
@@ -302,6 +310,10 @@ sidebar_position: 8
 
 <hr class="divider"/>
 
+
+
+
+## 2026학년도 AI·SW학과 입학전형 유형
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>2026학년도 AI·SW학과 입학전형 유형</h2></div>
@@ -339,6 +351,10 @@ sidebar_position: 8
 
 <hr class="divider"/>
 
+
+
+
+## 전형 방법 및 평가 요소
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>전형 방법 및 평가 요소</h2></div>
@@ -429,6 +445,10 @@ sidebar_position: 8
 
 <hr class="divider"/>
 
+
+
+
+## 모집단위별 전형별 모집 인원 (2026학년도)
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>모집단위별 전형별 모집 인원 (2026학년도)</h2></div>

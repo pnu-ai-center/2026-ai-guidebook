@@ -1,6 +1,6 @@
 ---
 id: part-4
-title: "부산대학교 SW중심대학 — 교육환경 개선 및 성과 모니터링"
+title: "교육환경 개선 및 성과 모니터링"
 sidebar_position: 4
 ---
 
@@ -268,6 +268,10 @@ sidebar_position: 4
 </div>
 
 
+
+
+## 교육 인프라 6대 구성요소
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>교육 인프라 6대 구성요소</h2></div>
   <div class="infra-grid">
@@ -300,6 +304,10 @@ sidebar_position: 4
 
 <hr class="divider"/>
 
+
+
+
+## PNU-ICEx — 통합 코딩 교육 시스템
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>PNU-ICEx — 통합 코딩 교육 시스템</h2></div>
@@ -360,6 +368,10 @@ sidebar_position: 4
 <hr class="divider"/>
 
 
+
+
+## PNU-ICEx 참여 주체별 역할
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>PNU-ICEx 참여 주체별 역할</h2></div>
   <div class="role-grid">
@@ -415,6 +427,10 @@ sidebar_position: 4
 <hr class="divider"/>
 
 
+
+
+## 전공 트랙 특화 교육환경 · 기자재 구축
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>전공 트랙 특화 교육환경 · 기자재 구축</h2></div>
   <div class="track-env-grid">
@@ -447,6 +463,10 @@ sidebar_position: 4
 
 <hr class="divider"/>
 
+
+
+
+## 성과관리위원회의 성과 개선 환류 체계 (PDCA)
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>성과관리위원회의 성과 개선 환류 체계 (PDCA)</h2></div>
@@ -495,6 +515,10 @@ sidebar_position: 4
 <hr class="divider"/>
 
 
+
+
+## PNU 마일스톤 프로그램 및 위원회 주도 성과 관리
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">06</div><h2>PNU 마일스톤 프로그램 및 위원회 주도 성과 관리</h2></div>
   <div class="milestone-grid">
@@ -515,6 +539,10 @@ sidebar_position: 4
 
 <hr class="divider"/>
 
+
+
+
+## 학년별 교육역량 평가 체계 — 전주기적 성취도 모니터링
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">07</div><h2>학년별 교육역량 평가 체계 — 전주기적 성취도 모니터링</h2></div>

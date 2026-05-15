@@ -576,3 +576,9 @@ main .col--3 {
     margin: 20mm;
   }
 }
+
+/* 마크다운 기본 헤딩 숨기기 (TOC용으로만 사용) */
+.theme-doc-markdown > h2,
+.theme-doc-markdown > h3 {
+  display: none !important;
+}

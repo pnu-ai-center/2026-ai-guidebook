@@ -1,6 +1,6 @@
 ---
 id: part-6
-title: "부산대학교 SW중심대학 — AI·SW융합교육 및 비전공자 전문교육 확대"
+title: "AI·SW융합교육 및 비전공자 전문교육 확대"
 sidebar_position: 6
 ---
 
@@ -208,6 +208,10 @@ sidebar_position: 6
 </div>
 
 
+
+
+## AI·SW 융합교육 이수학점 체계
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>AI·SW 융합교육 이수학점 체계</h2></div>
   <div class="credit-grid">
@@ -258,6 +262,10 @@ sidebar_position: 6
 
 <hr class="divider"/>
 
+
+
+
+## 14개 SW+X 융합트랙 — 단과대학별 참여 학과 및 트랙명
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>14개 SW+X 융합트랙 — 단과대학별 참여 학과 및 트랙명</h2></div>
@@ -318,6 +326,10 @@ sidebar_position: 6
 <hr class="divider"/>
 
 
+
+
+## AI·SW 융합교육 유형
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>AI·SW 융합교육 유형</h2></div>
   <div class="fusion-type-grid">
@@ -346,6 +358,10 @@ sidebar_position: 6
 
 <hr class="divider"/>
 
+
+
+
+## 전교생 AI·SW 기초교육 이수 경로
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>전교생 AI·SW 기초교육 이수 경로</h2></div>
@@ -376,6 +392,10 @@ sidebar_position: 6
 
 <hr class="divider"/>
 
+
+
+
+## 전교생 AI·SW 기초교육 고도화 세부 추진 전략
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>전교생 AI·SW 기초교육 고도화 세부 추진 전략</h2></div>
@@ -421,6 +441,10 @@ sidebar_position: 6
 
 <hr class="divider"/>
 
+
+
+
+## AI·SW 교양 교과목 신설 및 개정 목록
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">06</div><h2>AI·SW 교양 교과목 신설 및 개정 목록</h2></div>

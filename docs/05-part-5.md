@@ -1,6 +1,6 @@
 ---
 id: part-5
-title: "부산대학교 SW중심대학 — SW전공교육 강화"
+title: "SW전공교육 강화"
 sidebar_position: 5
 ---
 
@@ -172,6 +172,10 @@ sidebar_position: 5
 </div>
 
 
+
+
+## 8개 AI·SW 전공 특화 트랙
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>8개 AI·SW 전공 특화 트랙</h2></div>
   <div class="track-grid">
@@ -238,6 +242,10 @@ sidebar_position: 5
 <hr class="divider"/>
 
 
+
+
+## 산학협력 교육·취업 플랫폼 개선
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>산학협력 교육·취업 플랫폼 개선</h2></div>
   <div class="collab-grid">
@@ -273,6 +281,10 @@ sidebar_position: 5
 
 <hr class="divider"/>
 
+
+
+
+## 산업체 수요 기반 교육과정 개편 효율화
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>산업체 수요 기반 교육과정 개편 효율화</h2></div>

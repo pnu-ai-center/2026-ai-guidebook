@@ -1,6 +1,6 @@
 ---
 id: part-2
-title: "부산대학교 SW중심대학 — 교육목표 및 혁신노력"
+title: "교육목표 및 혁신노력"
 sidebar_position: 2
 ---
 
@@ -370,6 +370,10 @@ sidebar_position: 2
 </div>
 
 
+
+
+## 단계별 추진 로드맵
+
 <section>
   <div class="section-title fade-up">
     <div class="section-num">01</div>
@@ -404,6 +408,10 @@ sidebar_position: 2
 
 <hr class="divider"/>
 
+
+
+
+## 단계별 세부 추진전략
 
 <section>
   <div class="section-title fade-up">
@@ -515,6 +523,10 @@ sidebar_position: 2
 <hr class="divider"/>
 
 
+
+
+## AI융합교육원 사업추진체계
+
 <section>
   <div class="section-title fade-up">
     <div class="section-num">03</div>
@@ -586,6 +598,10 @@ sidebar_position: 2
 <hr class="divider"/>
 
 
+
+
+## 주요 성과
+
 <section>
   <div class="section-title fade-up">
     <div class="section-num">04</div>
@@ -617,6 +633,10 @@ sidebar_position: 2
 
 <hr class="divider"/>
 
+
+
+
+## 교육혁신 노력 및 대학의 지원 의지
 
 <section>
   <div class="section-title fade-up">

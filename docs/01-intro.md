@@ -1,6 +1,6 @@
 ---
 id: intro
-title: "부산대학교 SW중심대학 — 대학 소개 및 운영 방향"
+title: "대학 소개 및 운영 방향"
 sidebar_position: 1
 ---
 
@@ -349,6 +349,10 @@ sidebar_position: 1
 </div>
 
 
+
+
+## 핵심 교육 미션
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>핵심 교육 미션</h2></div>
   <div class="mission-grid">
@@ -383,6 +387,10 @@ sidebar_position: 1
 <hr class="divider"/>
 
 
+
+
+## 수요자 맞춤 AI·SW 교육
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>수요자 맞춤 AI·SW 교육</h2></div>
   <div class="audience-grid">
@@ -399,6 +407,10 @@ sidebar_position: 1
 
 <hr class="divider"/>
 
+
+
+
+## SW 전공교육 강화 — 주요 특징
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>SW 전공교육 강화 — 주요 특징</h2></div>
@@ -441,6 +453,10 @@ sidebar_position: 1
 <hr class="divider"/>
 
 
+
+
+## SW 융합교육 확대
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>SW 융합교육 확대</h2></div>
   <div class="feature-list">
@@ -461,6 +477,10 @@ sidebar_position: 1
 
 <hr class="divider"/>
 
+
+
+
+## 교육성과 공유 및 확산
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>교육성과 공유 및 확산</h2></div>
@@ -486,6 +506,10 @@ sidebar_position: 1
 
 <hr class="divider"/>
 
+
+
+
+## 4C 추진전략
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">06</div><h2>4C 추진전략</h2></div>
@@ -516,6 +540,10 @@ sidebar_position: 1
 <hr class="divider"/>
 
 
+
+
+## 8대 인재상 (SMARTPNU)
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">07</div><h2>8대 인재상 (SMARTPNU)</h2></div>
   <div class="talent-grid">
@@ -532,6 +560,10 @@ sidebar_position: 1
 
 <hr class="divider"/>
 
+
+
+
+## 16대 핵심역량과제
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">08</div><h2>16대 핵심역량과제</h2></div>
@@ -572,6 +604,10 @@ sidebar_position: 1
 
 <hr class="divider"/>
 
+
+
+
+## 대학의 지원 의지
 
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">09</div><h2>대학의 지원 의지</h2></div>
