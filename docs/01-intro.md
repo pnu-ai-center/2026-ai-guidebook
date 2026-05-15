@@ -4,7 +4,7 @@ title: "부산대학교 SW중심대학 — 대학 소개 및 운영 방향"
 sidebar_position: 1
 ---
 
-<style>
+<style>{`
   :root {
     --navy: #0b1f45;
     --blue: #1651c8;
@@ -326,9 +326,9 @@ sidebar_position: 1
   @keyframes up { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
   .au { animation: up 0.55s ease both; }
   .d1{animation-delay:.08s} .d2{animation-delay:.16s} .d3{animation-delay:.24s} .d4{animation-delay:.32s}
-</style>
+`}</style>
 
-<!-- HERO -->
+
 <div class="hero">
   <div class="hero-deco"><span></span><span></span></div>
   <div class="hero-grid">
@@ -337,7 +337,7 @@ sidebar_position: 1
         <span class="pill">SW중심대학</span>
         <span class="year">PUSAN NATIONAL UNIVERSITY</span>
       </div>
-      <h1>진정한 <em>AI·SW</em> 가치확산을 실현하는<br>부산대학교 SW중심대학</h1>
+      <h1>진정한 <em>AI·SW</em> 가치확산을 실현하는<br />부산대학교 SW중심대학</h1>
       <p class="sub">대학교육을 SW중심으로 혁신함으로써 학생·기업·사회의 Software 경쟁력을 강화하고, 진정한 Software 가치의 확산을 실현하는 대학</p>
     </div>
     <div class="hero-badge-stack">
@@ -348,7 +348,7 @@ sidebar_position: 1
   </div>
 </div>
 
-<!-- 핵심 교육 미션 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>핵심 교육 미션</h2></div>
   <div class="mission-grid">
@@ -380,9 +380,9 @@ sidebar_position: 1
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 수요자 맞춤 교육 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>수요자 맞춤 AI·SW 교육</h2></div>
   <div class="audience-grid">
@@ -391,15 +391,15 @@ sidebar_position: 1
       <p>이론과 실무를 겸비한 AI·SW 전문교육을 통해 현장에서 능력을 발휘할 수 있는 실무형 인재로 성장</p>
     </div>
     <div class="audience-card sw-minor au d2">
-      <div class="aud-tag"><div class="aud-dot" style="background:var(--coral)">W</div>SW 비전공자</div>
+      <div class="aud-tag"><div class="aud-dot" style={{background: 'var(--coral)'}}>W</div>SW 비전공자</div>
       <p>AI·SW기초 및 디지털리터러시 역량을 강화하여 다양한 전공분야에서 소프트웨어와 AI를 적용할 수 있는 인재를 양성</p>
     </div>
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- SW전공교육 강화 특징 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>SW 전공교육 강화 — 주요 특징</h2></div>
   <div class="feature-list">
@@ -438,9 +438,9 @@ sidebar_position: 1
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- SW융합교육 확대 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>SW 융합교육 확대</h2></div>
   <div class="feature-list">
@@ -459,34 +459,34 @@ sidebar_position: 1
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 교육성과 공유 및 확산 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>교육성과 공유 및 확산</h2></div>
   <div class="feature-list">
     <div class="feature-item au d1">
-      <div class="feature-num" style="background:var(--gold)">①</div>
+      <div class="feature-num" style={{background: 'var(--gold)'}}>①</div>
       <p>SW중심대학 1단계 사업 성과를 확산하고, <strong>AI·SW저변 확대와 인식제고 프로그램</strong> 고도화하여 지속적 발전</p>
     </div>
     <div class="feature-item au d2">
-      <div class="feature-num" style="background:var(--gold)">②</div>
+      <div class="feature-num" style={{background: 'var(--gold)'}}>②</div>
       <p>공교육 연계 AI·SW교육 확산 및 <strong>고교-대학 연계를 통한 고교 AI·SW교육 강화</strong> 기여</p>
     </div>
     <div class="feature-item au d3">
-      <div class="feature-num" style="background:var(--gold)">③</div>
+      <div class="feature-num" style={{background: 'var(--gold)'}}>③</div>
       <p>전주기적 AI·SW 창업 지원 모델 <strong>PSS+X(PNU Software Start-up+X)</strong> 구축</p>
     </div>
     <div class="feature-item au d4">
-      <div class="feature-num" style="background:var(--gold)">④</div>
+      <div class="feature-num" style={{background: 'var(--gold)'}}>④</div>
       <p>지역 대학간 혁신 네트워크 구축과 SW중심대학을 포함한 타 대학들과의 <strong>공동 콘텐츠 개발 및 공유</strong></p>
     </div>
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 4C 추진전략 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">06</div><h2>4C 추진전략</h2></div>
   <div class="strategy-grid">
@@ -513,9 +513,9 @@ sidebar_position: 1
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 8대 인재상 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">07</div><h2>8대 인재상 (SMARTPNU)</h2></div>
   <div class="talent-grid">
@@ -530,9 +530,9 @@ sidebar_position: 1
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 16대 핵심역량과제 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">08</div><h2>16대 핵심역량과제</h2></div>
   <div class="task-cols">
@@ -570,9 +570,9 @@ sidebar_position: 1
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 대학 지원 의지 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">09</div><h2>대학의 지원 의지</h2></div>
   <div class="support-row">
@@ -600,6 +600,6 @@ sidebar_position: 1
 </div>
 
 <footer>
-  <strong>부산대학교 SW중심대학</strong> — 동남권 디지털 대전환 수요맞춤형 AI·SW 인재양성 거점국립대학<br>
-  <span style="font-size:11px;">본 문서는 부산대학교 SW중심대학 소개 자료를 기반으로 정리되었습니다.</span>
+  <strong>부산대학교 SW중심대학</strong> — 동남권 디지털 대전환 수요맞춤형 AI·SW 인재양성 거점국립대학<br />
+  <span style={{fontSize: '11px'}}>본 문서는 부산대학교 SW중심대학 소개 자료를 기반으로 정리되었습니다.</span>
 </footer>

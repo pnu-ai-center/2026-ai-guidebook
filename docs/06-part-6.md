@@ -4,7 +4,7 @@ title: "부산대학교 SW중심대학 — AI·SW융합교육 및 비전공자 �
 sidebar_position: 6
 ---
 
-<style>
+<style>{`
   :root {
     --navy:   #0c1e42;
     --blue:   #1550c6;
@@ -193,72 +193,72 @@ sidebar_position: 6
     text-align:center;padding:26px;font-size:12px;margin-top:16px;
   }
   footer strong{color:rgba(255,255,255,.78);}
-</style>
+`}</style>
 
-<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">
       <span class="hero-num">05</span>
       <span class="hero-label">SW융합교육 및 비전공자 전문교육 확대</span>
     </div>
-    <h1><em>AI·SW 융합교육</em> 및<br>비전공자를 위한<br>전문교육 확대</h1>
+    <h1><em>AI·SW 융합교육</em> 및<br />비전공자를 위한<br />전문교육 확대</h1>
     <p class="sub">전 학문 분야 융합 교육과정 운영, 14개 SW+X 융합트랙, 그리고 전교생 AI·SW 기초교육 의무화와 고도화 전략</p>
   </div>
 </div>
 
-<!-- 융합교육 이수학점 체계 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>AI·SW 융합교육 이수학점 체계</h2></div>
   <div class="credit-grid">
     <div class="credit-card cc1 au d1">
-      <div class="credit-pts">61<small style="font-size:18px">학점</small></div>
+      <div class="credit-pts">61<small style={{fontSize: '18px'}}>학점</small></div>
       <div class="credit-unit">복수전공</div>
       <h3>AI·SW 복수전공</h3>
       <p>SW 전공 학과의 학생을 대상으로 한 융합 프로그램</p>
       <span class="credit-badge">AI·SW전공학과</span>
     </div>
-    <div class="credit-card cc1 au d2" style="border-top-color:var(--sky);">
-      <div class="credit-pts" style="color:var(--sky);">21<small style="font-size:18px">학점</small></div>
+    <div class="credit-card cc1 au d2" style={{borderTopColor: 'var(--sky)'}}>
+      <div class="credit-pts" style={{color: 'var(--sky)'}}>21<small style={{fontSize: '18px'}}>학점</small></div>
       <div class="credit-unit">부전공</div>
       <h3>AI·SW 부전공</h3>
       <p>SW 전공 학과의 학생을 대상으로 한 융합 프로그램</p>
-      <span class="credit-badge" style="background:#e2f4fd;color:#0076aa;">AI·SW전공학과</span>
+      <span class="credit-badge" style={{background: '#e2f4fd', color: '#0076aa'}}>AI·SW전공학과</span>
     </div>
     <div class="credit-card cc2 au d3">
-      <div class="credit-pts">48<small style="font-size:18px">학점</small></div>
+      <div class="credit-pts">48<small style={{fontSize: '18px'}}>학점</small></div>
       <div class="credit-unit">연계전공</div>
       <h3>AI·SW 연계전공</h3>
       <p>두 개 이상의 학과가 협력하여 구성, 모든 학과 학생 대상 융합 프로그램</p>
       <span class="credit-badge">전학과 대상</span>
     </div>
     <div class="credit-card cc3 au d4">
-      <div class="credit-pts">42<small style="font-size:18px">학점</small></div>
+      <div class="credit-pts">42<small style={{fontSize: '18px'}}>학점</small></div>
       <div class="credit-unit">융합전공 (2026년 신설)</div>
       <h3>AI·SW 융합전공</h3>
       <p>참여학과 전공교과목 + SW융합 공통교과목으로 구성. 연계/융합전공 대비 이수학점 상대적으로 낮은 융합 과정</p>
       <span class="credit-badge">산업AI·로봇AI 예정</span>
     </div>
     <div class="credit-card cc4 au d1">
-      <div class="credit-pts">21<small style="font-size:18px">학점</small></div>
+      <div class="credit-pts">21<small style={{fontSize: '18px'}}>학점</small></div>
       <div class="credit-unit">AI·SW 융합트랙</div>
       <h3>SW+X 융합트랙</h3>
       <p>참여학과가 자과 학생을 대상으로 한 융합 프로그램. 학과 주도적인 SW+X 트랙 <strong>14개 신설(2024)</strong></p>
       <span class="credit-badge">14개 트랙</span>
     </div>
-    <div class="credit-card au d2" style="border-top:4px solid var(--green);">
-      <div class="credit-pts" style="color:var(--green);">15<small style="font-size:18px">학점</small></div>
+    <div class="credit-card au d2" style={{borderTop: '4px solid var(--green)'}}>
+      <div class="credit-pts" style={{color: 'var(--green)'}}>15<small style={{fontSize: '18px'}}>학점</small></div>
       <div class="credit-unit">AI·SW 융합 마이크로디그리</div>
       <h3>융합 마이크로디그리</h3>
       <p>타과 학생을 위한 융합 프로그램. 2026년 4~5개 과정 신설 예정</p>
-      <span class="credit-badge" style="background:#e6f8ee;color:var(--green);">2026년 신설 예정</span>
+      <span class="credit-badge" style={{background: '#e6f8ee', color: 'var(--green)'}}>2026년 신설 예정</span>
     </div>
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 14개 SW+X 융합트랙 참여 학과 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>14개 SW+X 융합트랙 — 단과대학별 참여 학과 및 트랙명</h2></div>
   <div class="college-grid">
@@ -315,9 +315,9 @@ sidebar_position: 6
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 융합교육 유형 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>AI·SW 융합교육 유형</h2></div>
   <div class="fusion-type-grid">
@@ -344,9 +344,9 @@ sidebar_position: 6
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 전교생 AI·SW기초교육 이수 경로 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>전교생 AI·SW 기초교육 이수 경로</h2></div>
   <div class="pathway au">
@@ -374,16 +374,16 @@ sidebar_position: 6
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 전교생 AI·SW기초교육 고도화 전략 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>전교생 AI·SW 기초교육 고도화 세부 추진 전략</h2></div>
   <div class="strategy-grid">
     <div class="strat-card au d1">
       <h4>📚 교양선택 교과목 개정</h4>
       <ul>
-        <li>현과 교과목 중 2개 개정<br>「디지털리터러시의이해와활용」<br>「미디어크리에이터의이해와활용」</li>
+        <li>현과 교과목 중 2개 개정<br />「디지털리터러시의이해와활용」<br />「미디어크리에이터의이해와활용」</li>
         <li>최신 트렌드 및 신기술 분야 반영</li>
       </ul>
     </div>
@@ -419,9 +419,9 @@ sidebar_position: 6
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 신설·개정 교과목 목록 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">06</div><h2>AI·SW 교양 교과목 신설 및 개정 목록</h2></div>
   <div class="course-grid">
@@ -447,7 +447,7 @@ sidebar_position: 6
     </div>
     <div class="course-pill au d2">
       <div class="cp-dot dot-rev"></div>
-      <div><span class="tag tag-rev">개정</span><p>기초컴퓨터프로그래밍<br><small style="color:var(--gray)">하위주제 '메타버스' 신설</small></p></div>
+      <div><span class="tag tag-rev">개정</span><p>기초컴퓨터프로그래밍<br /><small style={{color: 'var(--gray)'}}>하위주제 '메타버스' 신설</small></p></div>
     </div>
     <div class="course-pill au d3">
       <div class="cp-dot dot-new"></div>
@@ -455,12 +455,12 @@ sidebar_position: 6
     </div>
     <div class="course-pill au d4">
       <div class="cp-dot dot-rev"></div>
-      <div><span class="tag tag-rev">의무</span><p>인공지능과 디지털사고 (3학점)<br><small style="color:var(--gray)">전교생 1학년 필수</small></p></div>
+      <div><span class="tag tag-rev">의무</span><p>인공지능과 디지털사고 (3학점)<br /><small style={{color: 'var(--gray)'}}>전교생 1학년 필수</small></p></div>
     </div>
   </div>
 </div>
 
 <footer>
-  <strong>부산대학교 SW중심대학</strong> — AI·SW융합교육 및 비전공자를 위한 전문교육 확대 (Chapter 05)<br>
-  <span style="font-size:11px;">본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
+  <strong>부산대학교 SW중심대학</strong> — AI·SW융합교육 및 비전공자를 위한 전문교육 확대 (Chapter 05)<br />
+  <span style={{fontSize: '11px'}}>본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
 </footer>

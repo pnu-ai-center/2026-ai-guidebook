@@ -4,7 +4,7 @@ title: "부산대학교 SW중심대학 — 교육환경 개선 및 성과 모니
 sidebar_position: 4
 ---
 
-<style>
+<style>{`
   :root {
     --navy:   #0d1e42;
     --blue:   #1652c8;
@@ -256,18 +256,18 @@ sidebar_position: 4
     text-align:center;padding:26px;font-size:12px;margin-top:16px;
   }
   footer strong{color:rgba(255,255,255,.78);}
-</style>
+`}</style>
 
-<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-chip"><span>03</span> 교육환경 개선 및 성과 모니터링</div>
-    <h1>현장 중심의<br><em>창의적 교육환경 구축</em></h1>
+    <h1>현장 중심의<br /><em>창의적 교육환경 구축</em></h1>
     <p class="sub">AI·SW 전공 특화 인프라 구축, PNU-ICEx 통합 코딩 교육 시스템, 그리고 전주기적 성과 모니터링 체계</p>
   </div>
 </div>
 
-<!-- 교육 인프라 6대 구성요소 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>교육 인프라 6대 구성요소</h2></div>
   <div class="infra-grid">
@@ -298,9 +298,9 @@ sidebar_position: 4
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- PNU-ICEx 시스템 상세 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>PNU-ICEx — 통합 코딩 교육 시스템</h2></div>
   <div class="icex-box au">
@@ -314,7 +314,7 @@ sidebar_position: 4
       <div class="icex-module m-ccm">
         <span class="mod-tag">CCM</span>
         <h4>Coding Capability Management</h4>
-        <h4 style="color:var(--blue);margin-bottom:6px;">지능형융합보안(S)</h4>
+        <h4 style={{color: 'var(--blue)', marginBottom: '6px'}}>지능형융합보안(S)</h4>
         <ul>
           <li>AI 보안, 블록체인</li>
           <li>프라이버시, 시스템 보안</li>
@@ -326,7 +326,7 @@ sidebar_position: 4
       <div class="icex-module m-kms">
         <span class="mod-tag">KMS</span>
         <h4>Knowledge Management System</h4>
-        <h4 style="color:var(--teal);margin-bottom:6px;">빅데이터(D)</h4>
+        <h4 style={{color: 'var(--teal)', marginBottom: '6px'}}>빅데이터(D)</h4>
         <ul>
           <li>데이터베이스, 헬스케어</li>
           <li>과정진도/성취도 관리</li>
@@ -335,7 +335,7 @@ sidebar_position: 4
       </div>
       <div class="icex-module m-oj">
         <span class="mod-tag">OJ / Code Place</span>
-        <h4 style="color:var(--purple);margin-bottom:6px;">시스템/클라우드(C)</h4>
+        <h4 style={{color: 'var(--purple)', marginBottom: '6px'}}>시스템/클라우드(C)</h4>
         <ul>
           <li>클라우드 컴퓨팅</li>
           <li>지능형 네트워크 통신 IoT</li>
@@ -345,7 +345,7 @@ sidebar_position: 4
       </div>
       <div class="icex-module m-api">
         <span class="mod-tag">Restful API</span>
-        <h4 style="color:#c06000;margin-bottom:6px;">인공지능(A)</h4>
+        <h4 style={{color: '#c06000', marginBottom: '6px'}}>인공지능(A)</h4>
         <ul>
           <li>AR·VR, Bio-informatics</li>
           <li>헬스케어</li>
@@ -357,9 +357,9 @@ sidebar_position: 4
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- ICEx 참여 주체별 역할 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>PNU-ICEx 참여 주체별 역할</h2></div>
   <div class="role-grid">
@@ -390,7 +390,7 @@ sidebar_position: 4
     </div>
   </div>
 
-  <div style="margin-top:24px;">
+  <div style={{marginTop: '24px'}}>
     <div class="partner-box au">
       <h4>연계 산업체 파트너</h4>
       <div class="partner-list">
@@ -412,9 +412,9 @@ sidebar_position: 4
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 전공 트랙 특화 교육환경 구축 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>전공 트랙 특화 교육환경 · 기자재 구축</h2></div>
   <div class="track-env-grid">
@@ -445,9 +445,9 @@ sidebar_position: 4
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 성과 모니터링 PDCA -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>성과관리위원회의 성과 개선 환류 체계 (PDCA)</h2></div>
   <div class="pdca-wrapper au">
@@ -492,9 +492,9 @@ sidebar_position: 4
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- PNU 마일스톤 & 위원회 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">06</div><h2>PNU 마일스톤 프로그램 및 위원회 주도 성과 관리</h2></div>
   <div class="milestone-grid">
@@ -513,12 +513,12 @@ sidebar_position: 4
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 학년별 교육역량 평가 체계 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">07</div><h2>학년별 교육역량 평가 체계 — 전주기적 성취도 모니터링</h2></div>
-  <div class="grade-timeline au" style="border-radius:14px;overflow:hidden;box-shadow:0 2px 16px rgba(13,30,66,.08);">
+  <div class="grade-timeline au" style={{borderRadius: '14px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(13,30,66,.08)'}}>
     <div class="grade-col">
       <div class="grade-head">1학년</div>
       <div class="grade-body">
@@ -528,7 +528,7 @@ sidebar_position: 4
           <li>→ 코딩기초역량</li>
           <li>미통과자 재수강</li>
         </ul>
-        <h5 style="margin-top:10px;">비교과</h5>
+        <h5 style={{marginTop: '10px'}}>비교과</h5>
         <ul><li>PNU 코딩인증</li></ul>
       </div>
       <div class="grade-note">코딩 기초 역량 확인</div>
@@ -542,7 +542,7 @@ sidebar_position: 4
           <li>→ 코딩심화역량</li>
           <li>부진자 멘토링</li>
         </ul>
-        <h5 style="margin-top:10px;">비교과</h5>
+        <h5 style={{marginTop: '10px'}}>비교과</h5>
         <ul><li>ACM-ICPC 참가</li></ul>
       </div>
       <div class="grade-note">코딩 심화 역량 강화</div>
@@ -556,7 +556,7 @@ sidebar_position: 4
           <li>→ 문제해결역량</li>
           <li>교육과정 개선</li>
         </ul>
-        <h5 style="margin-top:10px;">비교과</h5>
+        <h5 style={{marginTop: '10px'}}>비교과</h5>
         <ul><li>TOPCIT, 해커톤</li></ul>
       </div>
       <div class="grade-note">문제해결 역량 고도화</div>
@@ -570,13 +570,13 @@ sidebar_position: 4
           <li>→ 프로젝트설계역량</li>
           <li>교육과정 개선</li>
         </ul>
-        <h5 style="margin-top:10px;">비교과</h5>
+        <h5 style={{marginTop: '10px'}}>비교과</h5>
         <ul><li>프로젝트수행능력</li></ul>
       </div>
       <div class="grade-note">프로젝트·설계 역량</div>
     </div>
     <div class="grade-col">
-      <div class="grade-head" style="background:var(--sky);">졸업</div>
+      <div class="grade-head" style={{background: 'var(--sky)'}}>졸업</div>
       <div class="grade-body">
         <h5>졸업예정자 설문</h5>
         <ul>
@@ -591,6 +591,6 @@ sidebar_position: 4
 </div>
 
 <footer>
-  <strong>부산대학교 SW중심대학</strong> — 교육환경 개선 및 성과 모니터링 (Chapter 03)<br>
-  <span style="font-size:11px;">본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
+  <strong>부산대학교 SW중심대학</strong> — 교육환경 개선 및 성과 모니터링 (Chapter 03)<br />
+  <span style={{fontSize: '11px'}}>본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
 </footer>

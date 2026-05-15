@@ -4,7 +4,7 @@ title: "부산대학교 SW중심대학 — 교육목표 및 혁신노력"
 sidebar_position: 2
 ---
 
-<style>
+<style>{`
   :root {
     --navy: #0a1f44;
     --blue: #1a56c4;
@@ -351,13 +351,13 @@ sidebar_position: 2
   .delay-2 { animation-delay: 0.2s; }
   .delay-3 { animation-delay: 0.3s; }
   .delay-4 { animation-delay: 0.4s; }
-</style>
+`}</style>
 
-<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-badge">부산대학교 SW중심대학</div>
-    <h1>동남권 디지털 대전환을 이끄는<br><span>SMART 인재 양성 플랫폼</span></h1>
+    <h1>동남권 디지털 대전환을 이끄는<br /><span>SMART 인재 양성 플랫폼</span></h1>
     <p class="hero-sub">교육목표 및 혁신노력 — AI·SW중심 대학 교육체계 개편 및 단계별 인력양성 전략</p>
     <div class="hero-tag">
       <span>AI융합교육원</span>
@@ -369,7 +369,7 @@ sidebar_position: 2
   </div>
 </div>
 
-<!-- 단계별 로드맵 -->
+
 <section>
   <div class="section-title fade-up">
     <div class="section-num">01</div>
@@ -402,9 +402,9 @@ sidebar_position: 2
   </div>
 </section>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 단계별 세부 전략 -->
+
 <section>
   <div class="section-title fade-up">
     <div class="section-num">02</div>
@@ -512,9 +512,9 @@ sidebar_position: 2
   </div>
 </section>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- AI융합교육원 조직 -->
+
 <section>
   <div class="section-title fade-up">
     <div class="section-num">03</div>
@@ -522,7 +522,7 @@ sidebar_position: 2
   </div>
   <div class="org-container fade-up">
     <div class="org-center">
-      <div class="org-main-box">부산대학교 AI융합교육원<br><small style="font-size:11px;font-weight:400;opacity:0.7;">AI CONVERGENCE EDUCATION INSTITUTE</small></div>
+      <div class="org-main-box">부산대학교 AI융합교육원<br /><small style={{fontSize: '11px', fontWeight: '400', opacity: '0.7'}}>AI CONVERGENCE EDUCATION INSTITUTE</small></div>
     </div>
     <div class="dept-grid">
       <div class="dept-card">
@@ -583,9 +583,9 @@ sidebar_position: 2
   </div>
 </section>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 주요 성과 -->
+
 <section>
   <div class="section-title fade-up">
     <div class="section-num">04</div>
@@ -615,9 +615,9 @@ sidebar_position: 2
   </div>
 </section>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 교육혁신 노력 및 지원 의지 -->
+
 <section>
   <div class="section-title fade-up">
     <div class="section-num">05</div>
@@ -638,6 +638,6 @@ sidebar_position: 2
 </section>
 
 <footer>
-  <strong>부산대학교 SW중심대학</strong> — 동남권 디지털 대전환을 이끄는 SMART 인재 양성 플랫폼<br>
-  <span style="font-size:11px;">본 문서는 AI융합교육원 사업 보고서를 기반으로 정리되었습니다.</span>
+  <strong>부산대학교 SW중심대학</strong> — 동남권 디지털 대전환을 이끄는 SMART 인재 양성 플랫폼<br />
+  <span style={{fontSize: '11px'}}>본 문서는 AI융합교육원 사업 보고서를 기반으로 정리되었습니다.</span>
 </footer>

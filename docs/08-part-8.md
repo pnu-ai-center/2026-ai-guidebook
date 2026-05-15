@@ -4,7 +4,7 @@ title: "부산대학교 SW중심대학 — 대학 일반 현황"
 sidebar_position: 8
 ---
 
-<style>
+<style>{`
   :root {
     --navy:   #0b1d40;
     --blue:   #1450c4;
@@ -189,13 +189,13 @@ sidebar_position: 8
     text-align:center;padding:26px;font-size:12px;margin-top:16px;
   }
   footer strong{color:rgba(255,255,255,.78);}
-</style>
+`}</style>
 
-<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-chip"><span>07</span> 대학 일반 현황</div>
-    <h1>부산대학교 <em>SW중심대학</em><br>대학 일반 현황</h1>
+    <h1>부산대학교 <em>SW중심대학</em><br />대학 일반 현황</h1>
     <p class="sub">AI·SW 학과 구조, 2026학년도 입학전형 유형 및 방법, 모집단위별 정원 현황</p>
     <div class="hero-stats">
       <div class="hero-stat"><strong>205명+</strong><span>AI·SW 주요 모집 정원</span></div>
@@ -206,7 +206,7 @@ sidebar_position: 8
   </div>
 </div>
 
-<!-- 학과 구조 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>AI·SW 학과 구조 및 모집 정원</h2></div>
   <div class="dept-structure">
@@ -225,7 +225,7 @@ sidebar_position: 8
         <div class="dept-major">
           <div class="dm-name">인공지능전공 <sup>①</sup></div>
           <div class="dm-quota">60<small>명</small></div>
-          <div class="dm-note">경북대학교 전자공학부 인공지능전공과<br><strong>공동학과</strong>로 운영 (전국 최초)</div>
+          <div class="dm-note">경북대학교 전자공학부 인공지능전공과<br /><strong>공동학과</strong>로 운영 (전국 최초)</div>
         </div>
         <div class="dept-major">
           <div class="dm-name">디자인테크놀로지전공</div>
@@ -249,7 +249,7 @@ sidebar_position: 8
         <div class="dept-major">
           <div class="dm-name">데이터사이언스전공 <sup>②</sup></div>
           <div class="dm-quota">44<small>명</small></div>
-          <div class="dm-note">전공배정 시 44명 선택 가능<br>(의생명융합공학부 입학정원 108명 기준)</div>
+          <div class="dm-note">전공배정 시 44명 선택 가능<br />(의생명융합공학부 입학정원 108명 기준)</div>
         </div>
         <div class="dept-major">
           <div class="dm-name">의생명융합공학부 자율전공</div>
@@ -260,49 +260,49 @@ sidebar_position: 8
     </div>
 
   </div>
-  <div style="margin-top:14px;padding:14px 18px;background:white;border-radius:10px;border-left:4px solid var(--gold);box-shadow:0 1px 8px rgba(11,29,64,.06);font-size:12px;color:var(--gray);">
+  <div style={{marginTop: '14px', padding: '14px 18px', background: 'white', borderRadius: '10px', borderLeft: '4px solid var(--gold)', boxShadow: '0 1px 8px rgba(11,29,64,.06)', fontSize: '12px', color: 'var(--gray)'}}>
     <sup>①</sup> 인공지능전공은 경북대학교 전자공학부 인공지능전공과 공동학과로 운영 &nbsp;|&nbsp;
     <sup>②</sup> 데이터사이언스전공은 전공배정 시 44명 선택 가능 &nbsp;|&nbsp;
     <sup>③</sup> 첨단IT자율전공은 전공배정 시 정보컴퓨터공학부 선택 가능
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 모집 정원 시각화 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>AI·SW학과 모집 정원 현황</h2></div>
   <div class="quota-chart au">
     <div class="quota-row">
       <div class="quota-label">컴퓨터공학전공</div>
       <div class="quota-bar-wrap">
-        <div class="quota-bar qb1" style="width:82%">84명</div>
+        <div class="quota-bar qb1" style={{width: '82%'}}>84명</div>
       </div>
     </div>
     <div class="quota-row">
       <div class="quota-label">인공지능전공</div>
       <div class="quota-bar-wrap">
-        <div class="quota-bar qb2" style="width:59%">60명 (공동학과)</div>
+        <div class="quota-bar qb2" style={{width: '59%'}}>60명 (공동학과)</div>
       </div>
     </div>
     <div class="quota-row">
       <div class="quota-label">데이터사이언스전공</div>
       <div class="quota-bar-wrap">
-        <div class="quota-bar qb3" style="width:43%">44명</div>
+        <div class="quota-bar qb3" style={{width: '43%'}}>44명</div>
       </div>
     </div>
     <div class="quota-row">
       <div class="quota-label">디자인테크놀로지전공</div>
       <div class="quota-bar-wrap">
-        <div class="quota-bar qb4" style="width:17%">17명</div>
+        <div class="quota-bar qb4" style={{width: '17%'}}>17명</div>
       </div>
     </div>
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 전형 유형 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>2026학년도 AI·SW학과 입학전형 유형</h2></div>
   <div class="admission-type-grid">
@@ -337,9 +337,9 @@ sidebar_position: 8
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 전형 방법 및 평가 요소 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>전형 방법 및 평가 요소</h2></div>
   <div class="method-table au">
@@ -356,68 +356,68 @@ sidebar_position: 8
       </thead>
       <tbody>
         <tr>
-          <td rowspan="2"><span class="type-tag tt-susi">수시</span><br>학생부 교과</td>
+          <td rowspan="2"><span class="type-tag tt-susi">수시</span><br />학생부 교과</td>
           <td>학생부교과전형</td>
-          <td style="text-align:left;">서류(학생부) 평가 100%</td>
+          <td style={{textAlign: 'left'}}>서류(학생부) 평가 100%</td>
           <td>100</td>
           <td>0</td>
           <td><span class="badge-o">적용</span></td>
         </tr>
         <tr>
           <td>지역인재전형 (교과)</td>
-          <td style="text-align:left;">학생부 교과 80% + 학업역량평가 20%</td>
+          <td style={{textAlign: 'left'}}>학생부 교과 80% + 학업역량평가 20%</td>
           <td>100</td>
           <td>0</td>
           <td><span class="badge-o">적용</span></td>
         </tr>
         <tr>
-          <td rowspan="4"><span class="type-tag tt-susi">수시</span><br>학생부 종합</td>
+          <td rowspan="4"><span class="type-tag tt-susi">수시</span><br />학생부 종합</td>
           <td>학생부종합전형</td>
-          <td style="text-align:left;">1단계: 서류(학생부) 100% (3~4배수)<br>2단계: 1단계 성적 80% + 면접 20%</td>
+          <td style={{textAlign: 'left'}}>1단계: 서류(학생부) 100% (3~4배수)<br />2단계: 1단계 성적 80% + 면접 20%</td>
           <td>100</td>
           <td>0</td>
           <td><span class="badge-o">적용</span></td>
         </tr>
         <tr>
           <td>지역인재전형 (종합)</td>
-          <td style="text-align:left;">1단계: 서류(학생부) 100% (3~4배수)<br>2단계: 1단계 성적 80% + 면접 20%</td>
+          <td style={{textAlign: 'left'}}>1단계: 서류(학생부) 100% (3~4배수)<br />2단계: 1단계 성적 80% + 면접 20%</td>
           <td>100</td>
           <td>0</td>
           <td><span class="badge-o">적용</span></td>
         </tr>
         <tr>
           <td>지역인재 저소득층·사회배려자·저소득층·특수교육대상자 등</td>
-          <td style="text-align:left;">서류(학생부) 평가 100%</td>
+          <td style={{textAlign: 'left'}}>서류(학생부) 평가 100%</td>
           <td>100</td>
           <td>0</td>
           <td><span class="badge-x">미적용</span></td>
         </tr>
         <tr>
           <td>농어촌·특성화고교</td>
-          <td style="text-align:left;">서류(학생부) 평가 100%</td>
+          <td style={{textAlign: 'left'}}>서류(학생부) 평가 100%</td>
           <td>100</td>
           <td>0</td>
           <td><span class="badge-x">미적용</span></td>
         </tr>
         <tr>
-          <td rowspan="2"><span class="type-tag tt-susi">수시</span><br>논술</td>
+          <td rowspan="2"><span class="type-tag tt-susi">수시</span><br />논술</td>
           <td>논술전형</td>
-          <td style="text-align:left;">논술 70% + 학생부 교과 30%</td>
+          <td style={{textAlign: 'left'}}>논술 70% + 학생부 교과 30%</td>
           <td>100</td>
           <td>0</td>
           <td><span class="badge-o">적용</span></td>
         </tr>
         <tr>
           <td>지역인재전형 논술</td>
-          <td style="text-align:left;">논술 70% + 학생부 교과 30%</td>
+          <td style={{textAlign: 'left'}}>논술 70% + 학생부 교과 30%</td>
           <td>100</td>
           <td>0</td>
           <td><span class="badge-o">적용</span></td>
         </tr>
         <tr>
-          <td><span class="type-tag tt-jeongsi">정시</span><br>수능</td>
+          <td><span class="type-tag tt-jeongsi">정시</span><br />수능</td>
           <td>수능 가군 / 나군</td>
-          <td style="text-align:left;">수능 성적 기반</td>
+          <td style={{textAlign: 'left'}}>수능 성적 기반</td>
           <td>—</td>
           <td>—</td>
           <td><span class="badge-o">적용</span></td>
@@ -427,109 +427,109 @@ sidebar_position: 8
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 모집단위별 전형별 인원 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>모집단위별 전형별 모집 인원 (2026학년도)</h2></div>
-  <div style="background:white;border-radius:14px;box-shadow:0 2px 14px rgba(11,29,64,.07);overflow:hidden;" class="au">
-    <table style="width:100%;border-collapse:collapse;">
+  <div style={{background: 'white', borderRadius: '14px', boxShadow: '0 2px 14px rgba(11,29,64,.07)', overflow: 'hidden'}} class="au">
+    <table style={{width: '100%', borderCollapse: 'collapse'}}>
       <thead>
-        <tr style="background:var(--navy);color:white;">
-          <th style="padding:12px 14px;font-size:11px;text-align:left;">모집단위</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">학생부교과</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">교과 지역인재</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">농어촌</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">학생부종합</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">종합 지역인재</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">저소득층</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">특수교육</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">사회배려</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">논술</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">가군</th>
-          <th style="padding:12px 10px;font-size:11px;text-align:center;">나군</th>
+        <tr style={{background: 'var(--navy)', color: 'white'}}>
+          <th style={{padding: '12px 14px', fontSize: '11px', textAlign: 'left'}}>모집단위</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>학생부교과</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>교과 지역인재</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>농어촌</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>학생부종합</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>종합 지역인재</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>저소득층</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>특수교육</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>사회배려</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>논술</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>가군</th>
+          <th style={{padding: '12px 10px', fontSize: '11px', textAlign: 'center'}}>나군</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="border-bottom:1px solid var(--border);">
-          <td style="padding:11px 14px;font-size:13px;font-weight:700;">컴퓨터공학전공</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">20</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">12</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">15</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">7</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">6</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">10</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">10</td>
+        <tr style={{borderBottom: '1px solid var(--border)'}}>
+          <td style={{padding: '11px 14px', fontSize: '13px', fontWeight: '700'}}>컴퓨터공학전공</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>20</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>12</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>15</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>7</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>6</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>10</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>10</td>
         </tr>
-        <tr style="border-bottom:1px solid var(--border);background:#f9fbff;">
-          <td style="padding:11px 14px;font-size:13px;font-weight:700;">인공지능전공</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">12</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">8</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">3</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">6</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">5</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">12</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
+        <tr style={{borderBottom: '1px solid var(--border)', background: '#f9fbff'}}>
+          <td style={{padding: '11px 14px', fontSize: '13px', fontWeight: '700'}}>인공지능전공</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>12</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>8</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>3</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>6</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>5</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>12</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
         </tr>
-        <tr style="border-bottom:1px solid var(--border);">
-          <td style="padding:11px 14px;font-size:13px;font-weight:700;">디자인테크놀로지전공</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">11</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">3</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
+        <tr style={{borderBottom: '1px solid var(--border)'}}>
+          <td style={{padding: '11px 14px', fontSize: '13px', fontWeight: '700'}}>디자인테크놀로지전공</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>11</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>3</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
         </tr>
-        <tr style="border-bottom:1px solid var(--border);background:#f9fbff;">
-          <td style="padding:11px 14px;font-size:13px;font-weight:700;">데이터사이언스전공</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">28</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">15</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">3</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">20</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">15</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">2</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">30</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
+        <tr style={{borderBottom: '1px solid var(--border)', background: '#f9fbff'}}>
+          <td style={{padding: '11px 14px', fontSize: '13px', fontWeight: '700'}}>데이터사이언스전공</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>28</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>15</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>3</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>20</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>15</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>2</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>30</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
         </tr>
         <tr>
-          <td style="padding:11px 14px;font-size:13px;font-weight:700;">첨단IT자율전공</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">43</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">5</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">1</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">—</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">4</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">6</td>
-          <td style="padding:11px 10px;text-align:center;font-size:13px;">28</td>
+          <td style={{padding: '11px 14px', fontSize: '13px', fontWeight: '700'}}>첨단IT자율전공</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>43</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>5</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>1</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>—</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>4</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>6</td>
+          <td style={{padding: '11px 10px', textAlign: 'center', fontSize: '13px'}}>28</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div style="margin-top:12px;font-size:11.5px;color:var(--gray);padding:0 4px;">
+  <div style={{marginTop: '12px', fontSize: '11.5px', color: 'var(--gray)', padding: '0 4px'}}>
     ※ 인공지능전공 나군, 디자인테크놀로지전공 종합·논술·정시는 모집인원 미반영 또는 별도 확인 필요
   </div>
 </div>
 
 <footer>
-  <strong>부산대학교 SW중심대학</strong> — 대학 일반 현황 (Chapter 07)<br>
-  <span style="font-size:11px;">본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
+  <strong>부산대학교 SW중심대학</strong> — 대학 일반 현황 (Chapter 07)<br />
+  <span style={{fontSize: '11px'}}>본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
 </footer>

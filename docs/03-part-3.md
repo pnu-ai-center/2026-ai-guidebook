@@ -4,7 +4,7 @@ title: "부산대학교 SW중심대학 — 대학의 자율적인 교육혁신"
 sidebar_position: 3
 ---
 
-<style>
+<style>{`
   :root {
     --navy:   #0c1e44;
     --blue:   #1750c8;
@@ -257,20 +257,20 @@ sidebar_position: 3
     font-size:12px; margin-top:16px;
   }
   footer strong { color:rgba(255,255,255,.78); }
-</style>
+`}</style>
 
-<!-- HERO -->
+
 <div class="hero">
   <div class="hero-blob b1"></div>
   <div class="hero-blob b2"></div>
   <div class="hero-inner">
     <div class="hero-chip">대학의 자율적인 교육혁신</div>
-    <h1>대학 자율의<br><em>AI·SW 전공 및 융합</em><br>교육체계 도입</h1>
+    <h1>대학 자율의<br /><em>AI·SW 전공 및 융합</em><br />교육체계 도입</h1>
     <p class="sub">특성화·전문화를 위한 학사 조직과 제도 개편, 글로벌 표준 반영 AI·SW 교육혁신모델 수립, 융합교육체계 다변화</p>
   </div>
 </div>
 
-<!-- 4대 추진 방향 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>4대 추진 방향</h2></div>
   <div class="pillar-grid">
@@ -313,9 +313,9 @@ sidebar_position: 3
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 부산대-경북대 인공지능 공동학과 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>부산대–경북대 인공지능 공동학과 (전국 최초)</h2></div>
   <div class="joint-box au">
@@ -327,21 +327,21 @@ sidebar_position: 3
       <div class="joint-uni pnu">
         <span class="uni-tag">부산대학교</span>
         <h4>인공지능전공 68명</h4>
-        <p>AI Software 특화 교과목 주관<br>교육부 증원 포함</p>
+        <p>AI Software 특화 교과목 주관<br />교육부 증원 포함</p>
       </div>
       <div class="joint-uni knu">
         <span class="uni-tag">경북대학교</span>
         <h4>인공지능전공 60명</h4>
-        <p>AI Hardware 특화 교과목 주관<br>교육부 증원 포함</p>
+        <p>AI Hardware 특화 교과목 주관<br />교육부 증원 포함</p>
       </div>
     </div>
     <div class="joint-note">📌 전국 최초 인공지능 공동학과 신설 — 두 대학이 SW(소프트웨어)와 HW(하드웨어) 특화 교과목을 각각 주관하여 시너지 창출</div>
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 8개 전공 특화 트랙 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>8개 AI·SW 전공 특화 트랙</h2></div>
   <div class="track-grid">
@@ -396,9 +396,9 @@ sidebar_position: 3
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- SMART-PNU 교육혁신모델 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>SMART-PNU SW 교육혁신모델 — AI·SW 전공 교육체계 개선</h2></div>
   <div class="smart-list">
@@ -429,9 +429,9 @@ sidebar_position: 3
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 융합교육 혁신 4방향 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>교육혁신 노력 — 융합교육 혁신 4방향</h2></div>
   <div class="fusion-grid">
@@ -483,6 +483,6 @@ sidebar_position: 3
 </div>
 
 <footer>
-  <strong>부산대학교 SW중심대학</strong> — 대학의 자율적인 교육혁신 (Chapter 02)<br>
-  <span style="font-size:11px;">본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
+  <strong>부산대학교 SW중심대학</strong> — 대학의 자율적인 교육혁신 (Chapter 02)<br />
+  <span style={{fontSize: '11px'}}>본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
 </footer>

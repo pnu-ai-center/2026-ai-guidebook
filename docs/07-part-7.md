@@ -4,7 +4,7 @@ title: "부산대학교 SW중심대학 — 성과확산 및 인재기반 조성"
 sidebar_position: 7
 ---
 
-<style>
+<style>{`
   :root {
     --navy:   #0b1d40;
     --blue:   #1450c4;
@@ -208,18 +208,18 @@ sidebar_position: 7
     text-align:center;padding:26px;font-size:12px;margin-top:16px;
   }
   footer strong{color:rgba(255,255,255,.78);}
-</style>
+`}</style>
 
-<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-chip"><span>06</span> 성과확산 및 인재기반 조성</div>
-    <h1><em>성과확산</em> 및<br>인재기반 조성</h1>
+    <h1><em>성과확산</em> 및<br />인재기반 조성</h1>
     <p class="sub">AI·SW 저변 확대, 전주기적 창업 지원 모델(PSS+X), 대학간 협력, 고교 AI·SW 교육 기여, 그리고 지속가능한 자립화 방안</p>
   </div>
 </div>
 
-<!-- AI·SW저변확대 — 연계 대상별 추진 계획 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>AI·SW 저변확대 — 연계 대상별 추진 계획</h2></div>
   <div class="expand-grid">
@@ -273,7 +273,7 @@ sidebar_position: 7
       </ul>
     </div>
 
-    <div class="expand-card au d2" style="border-top-color:var(--green);">
+    <div class="expand-card au d2" style={{borderTopColor: 'var(--green)'}}>
       <h3>🏘️ 지역민 및 소외계층</h3>
       <ul>
         <li>지역민을 위한 SW·AI 문화활동 확대</li>
@@ -285,9 +285,9 @@ sidebar_position: 7
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 주요 저변확대 성과 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>주요 저변확대 성과 하이라이트</h2></div>
   <div class="highlight-grid">
@@ -318,18 +318,18 @@ sidebar_position: 7
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 전주기적 창업 확산 전략 5단계 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>전주기적 창업 확산 전략 — PSS+X 5단계</h2></div>
   <div class="step-timeline au">
     <div class="step-col">
-      <div class="step-head sh1">STEP 1<br>창업역량 배양</div>
+      <div class="step-head sh1">STEP 1<br />창업역량 배양</div>
       <div class="step-body">
         <h5>교과</h5>
         <ul><li>인공지능기반창업 (3학점)</li></ul>
-        <h5 style="margin-top:8px;">비교과</h5>
+        <h5 style={{marginTop: '8px'}}>비교과</h5>
         <ul>
           <li>SW창업 동문초청 특강</li>
           <li>PNU 아이디어 경진대회</li>
@@ -338,14 +338,14 @@ sidebar_position: 7
       </div>
     </div>
     <div class="step-col">
-      <div class="step-head sh2">STEP 2<br>아이템 발굴/팀빌딩</div>
+      <div class="step-head sh2">STEP 2<br />아이템 발굴/팀빌딩</div>
       <div class="step-body">
         <h5>팀빌딩 지원</h5>
         <ul>
           <li>온라인 팀매칭 시스템</li>
           <li>MBTI 성격유형 검사</li>
         </ul>
-        <h5 style="margin-top:8px;">심화교육</h5>
+        <h5 style={{marginTop: '8px'}}>심화교육</h5>
         <ul>
           <li>창업 아이템 검증 및 심화교육</li>
           <li>PNU 창업동아리</li>
@@ -354,16 +354,16 @@ sidebar_position: 7
       </div>
     </div>
     <div class="step-col">
-      <div class="step-head sh3">STEP 3<br>프로토타입(MVP)</div>
+      <div class="step-head sh3">STEP 3<br />프로토타입(MVP)</div>
       <div class="step-body">
         <h5>비교과</h5>
         <ul><li>PNU 창의융합 SW해커톤</li></ul>
-        <h5 style="margin-top:8px;">지도교수</h5>
+        <h5 style={{marginTop: '8px'}}>지도교수</h5>
         <ul>
           <li>SW개발 지도교수</li>
           <li>창업공간·시제품 제작</li>
         </ul>
-        <h5 style="margin-top:8px;">창업활동 지원</h5>
+        <h5 style={{marginTop: '8px'}}>창업활동 지원</h5>
         <ul>
           <li>창업활동 지원금</li>
           <li>시제품 제작 지원</li>
@@ -371,7 +371,7 @@ sidebar_position: 7
       </div>
     </div>
     <div class="step-col">
-      <div class="step-head sh4">STEP 4<br>비즈니스모델 개발</div>
+      <div class="step-head sh4">STEP 4<br />비즈니스모델 개발</div>
       <div class="step-body">
         <h5>PNU SW Start-up</h5>
         <ul>
@@ -381,7 +381,7 @@ sidebar_position: 7
           <li>정부지원사업 특강</li>
           <li>기초 재무회계 특강</li>
         </ul>
-        <h5 style="margin-top:8px;">창업 준비 지원</h5>
+        <h5 style={{marginTop: '8px'}}>창업 준비 지원</h5>
         <ul>
           <li>부산벤처창업 페스티벌</li>
           <li>지식재산권(IP) 지원</li>
@@ -389,7 +389,7 @@ sidebar_position: 7
       </div>
     </div>
     <div class="step-col">
-      <div class="step-head sh5">STEP 5<br>SW창업</div>
+      <div class="step-head sh5">STEP 5<br />SW창업</div>
       <div class="step-body">
         <h5>기업 지원</h5>
         <ul>
@@ -398,7 +398,7 @@ sidebar_position: 7
           <li>PNU AVEC 창업공간 제공</li>
           <li>투자 연계 / 펀드 연계</li>
         </ul>
-        <h5 style="margin-top:8px;">사후 연계</h5>
+        <h5 style={{marginTop: '8px'}}>사후 연계</h5>
         <ul>
           <li>SW창업 장학금</li>
           <li>인턴십 지원 (연계 취업)</li>
@@ -409,9 +409,9 @@ sidebar_position: 7
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 창업 관련 교과목 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">04</div><h2>PSS+X 창업지원 체계 — 주관 기관별 역할</h2></div>
   <div class="pss-grid">
@@ -433,9 +433,9 @@ sidebar_position: 7
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 대학간 AI·SW인재 양성 협력 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">05</div><h2>대학간 AI·SW인재 양성 협력 주요 성과</h2></div>
   <div class="collab-grid">
@@ -462,9 +462,9 @@ sidebar_position: 7
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 고교 AI·SW교육 확대 기여 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">06</div><h2>고교 AI·SW교육 확대 기여 방안</h2></div>
   <div class="highschool-grid">
@@ -491,9 +491,9 @@ sidebar_position: 7
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 자립화 방안 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">07</div><h2>자립화 방안 확립</h2></div>
   <div class="auto-grid">
@@ -517,6 +517,6 @@ sidebar_position: 7
 </div>
 
 <footer>
-  <strong>부산대학교 SW중심대학</strong> — 성과확산 및 인재기반 조성 (Chapter 06)<br>
-  <span style="font-size:11px;">본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
+  <strong>부산대학교 SW중심대학</strong> — 성과확산 및 인재기반 조성 (Chapter 06)<br />
+  <span style={{fontSize: '11px'}}>본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
 </footer>

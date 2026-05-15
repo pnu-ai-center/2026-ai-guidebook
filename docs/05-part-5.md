@@ -4,7 +4,7 @@ title: "부산대학교 SW중심대학 — SW전공교육 강화"
 sidebar_position: 5
 ---
 
-<style>
+<style>{`
   :root {
     --navy:   #0b1d40;
     --blue:   #1550c4;
@@ -157,21 +157,21 @@ sidebar_position: 5
     text-align:center;padding:26px;font-size:12px;margin-top:16px;
   }
   footer strong{color:rgba(255,255,255,.78);}
-</style>
+`}</style>
 
-<!-- HERO -->
+
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">
       <span class="num">04</span>
       <span class="label">SW전공교육 강화</span>
     </div>
-    <h1><em>AI·SW</em><br>전공교육 강화</h1>
+    <h1><em>AI·SW</em><br />전공교육 강화</h1>
     <p class="sub">신기술 분야 현장실무형 AI·SW 전공 특화 인재 양성을 위한 8개 전공트랙 개설, 산업체 수요 기반 교육과정 개편, 그리고 산학협력 플랫폼 일원화</p>
   </div>
 </div>
 
-<!-- 8개 전공 특화 트랙 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">01</div><h2>8개 AI·SW 전공 특화 트랙</h2></div>
   <div class="track-grid">
@@ -235,9 +235,9 @@ sidebar_position: 5
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 산학협력 교육·취업 플랫폼 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">02</div><h2>산학협력 교육·취업 플랫폼 개선</h2></div>
   <div class="collab-grid">
@@ -271,9 +271,9 @@ sidebar_position: 5
   </div>
 </div>
 
-<hr class="divider">
+<hr class="divider"/>
 
-<!-- 산업체 수요 기반 교육과정 개편 효율화 -->
+
 <div class="wrap">
   <div class="sec-head au"><div class="sec-num">03</div><h2>산업체 수요 기반 교육과정 개편 효율화</h2></div>
   <div class="reform-flow au">
@@ -302,6 +302,6 @@ sidebar_position: 5
 </div>
 
 <footer>
-  <strong>부산대학교 SW중심대학</strong> — SW전공교육 강화 (Chapter 04)<br>
-  <span style="font-size:11px;">본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
+  <strong>부산대학교 SW중심대학</strong> — SW전공교육 강화 (Chapter 04)<br />
+  <span style={{fontSize: '11px'}}>본 문서는 부산대학교 SW중심대학 사업 보고서를 기반으로 정리되었습니다.</span>
 </footer>
