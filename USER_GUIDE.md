@@ -65,35 +65,62 @@ description: 부산대학교 AI융합교육원을 소개합니다.
 [클릭할 글자](https://www.pusan.ac.kr)
 ```
 
-## 4. 다단 나누기 (Columns 레이아웃) 활용법
+## 4. 디자인 꾸미기 (특수 기능)
 
-노션(Notion)이나 한글 문서처럼 화면을 세로로 2등분 또는 3등분하여 내용을 나란히 배치하고 싶을 때 사용하는 특수 기능입니다.
-이 기능은 대소문자를 정확히 구분해야 합니다.
+마크다운 기본 기능 외에도 브로슈어를 예쁘게 꾸밀 수 있는 전용 컴포넌트들을 제공합니다. **이 기능들은 대소문자와 띄어쓰기를 정확히 지켜야 합니다.**
 
-### 기본 2단 나누기 (반반)
-`<Columns>` 안에 `<Col>`을 두 개 넣으면 화면이 정확히 반으로 나뉩니다.
+### 1) 알림 상자 (Callout)
+안내, 팁, 경고 등을 예쁜 색상 박스로 감싸서 보여줍니다.
+```markdown
+:::info 공지사항
+여기에 공지 내용을 적습니다.
+:::
 
+:::tip 꿀팁
+알아두면 좋은 정보입니다.
+:::
+
+:::warning 주의
+주의사항을 적습니다.
+:::
+```
+
+### 2) 형광펜 (Highlight)
+글자 배경색을 칠해 강조합니다.
+```markdown
+이 문장은 <Highlight color="#ef4444">빨간색</Highlight>으로 강조됩니다.
+(기본은 파란색: <Highlight>파란색 강조</Highlight>)
+```
+
+### 3) 링크 버튼 (HeroButton)
+클릭 가능한 예쁜 버튼을 만듭니다.
+```markdown
+<HeroButton href="https://pusan.ac.kr">학교 홈페이지</HeroButton>
+<HeroButton href="/docs/intro" outline={true}>안내서 홈 (테두리만)</HeroButton>
+```
+
+### 4) 다단 나누기 (Columns 레이아웃)
+화면을 세로로 2등분 또는 3등분하여 내용을 나란히 배치합니다. `<Col>` 태그 위아래로는 반드시 한 줄씩 띄워야 합니다.
+
+#### 2단 나누기 (반반)
 ```markdown
 <Columns>
   <Col>
   
   **왼쪽 구역입니다.**
-  원하는 내용을 마크다운으로 자유롭게 적으세요.
+  원하는 내용을 적으세요.
   
   </Col>
   <Col>
   
   **오른쪽 구역입니다.**
-  마찬가지로 목록이나 이미지를 넣을 수 있습니다.
+  이미지나 글을 넣으세요.
   
   </Col>
 </Columns>
 ```
-*(주의: `<Col>` 태그 위아래로는 반드시 한 줄씩 빈 줄을 띄워주어야 마크다운이 정상적으로 인식됩니다.)*
 
-### 3단 나누기
-화면을 3등분 하고 싶다면 `cols={3}` 속성을 추가하고 `<Col>`을 3개 넣으세요.
-
+#### 3단 나누기
 ```markdown
 <Columns cols={3}>
   <Col> 첫 번째 칸 </Col>
@@ -101,6 +128,21 @@ description: 부산대학교 AI융합교육원을 소개합니다.
   <Col> 세 번째 칸 </Col>
 </Columns>
 ```
+
+### 5) 탭 메뉴 (Tabs)
+메뉴를 클릭할 때마다 내용이 바뀌게 만듭니다. 이 기능을 쓸 때는 맨 위에 `import` 문장을 꼭 적어주세요.
+
+```markdown
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="tab1" label="탭 1" default>첫 번째 내용</TabItem>
+  <TabItem value="tab2" label="탭 2">두 번째 내용</TabItem>
+</Tabs>
+```
+
+---
 
 ## 5. 관리자 페이지 기능 가이드
 
