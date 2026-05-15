@@ -481,11 +481,35 @@ function initEditor() {
   toastEditor = new toastui.Editor({
     el: document.querySelector('#toast-editor'),
     height: '100%',
-    initialEditType: 'wysiwyg',
+    initialEditType: 'markdown', // 브로슈어 편집을 위해 기본을 마크다운으로 변경
     previewStyle: 'tab',
     language: 'ko-KR',
     hideModeSwitch: false
   });
+  
+  injectCustomCSS();
+}
+
+/* 실제 홈페이지의 디자인(custom.css)을 미리보기 화면에 완벽하게 적용하는 함수 */
+async function injectCustomCSS() {
+  try {
+    const r = await ghFetch(`/repos/${ORG}/${REPO}/contents/src/css/custom.css`);
+    if (!r.ok) return;
+    const d = await r.json();
+    let css = decodeURIComponent(escape(atob(d.content)));
+    
+    // Docusaurus 본문 클래스를 Toast UI 미리보기 클래스로 치환하여 스타일 완벽 적용
+    css = css.replace(/\.theme-doc-markdown/g, '.toastui-editor-contents');
+    
+    // 미리보기 화면의 배경색 등 기본 스타일 보정
+    css += `\n.toastui-editor-contents { background: white; padding: 32px 40px !important; border-radius: 16px; border: 1px solid #e2e8f0; }`;
+    
+    const style = document.createElement('style');
+    style.innerHTML = css;
+    document.head.appendChild(style);
+  } catch(e) {
+    console.error("미리보기용 custom.css 로드 실패:", e);
+  }
 }
 
 /* ─── 새 문서 작성(모달) ─── */
