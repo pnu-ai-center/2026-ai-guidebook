@@ -6,6 +6,10 @@
 <title>브로슈어 관리 | AI융합교육원</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<!-- Toast UI Editor -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<script src="https://uicdn.toast.com/editor/latest/i18n/ko-kr.js"></script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   :root{
@@ -133,9 +137,13 @@
 
   /* MODAL */
   .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;z-index:200}
-  .modal{background:white;border-radius:24px;width:90%;max-width:500px;padding:32px;box-shadow:0 20px 40px rgba(0,0,0,.2);position:relative}
+  .modal{background:white;border-radius:24px;width:95%;max-width:1200px;height:90vh;padding:32px;box-shadow:0 20px 40px rgba(0,0,0,.2);position:relative;display:flex;flex-direction:column}
   .modal-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--gray-400)}
-  .modal-title{font-size:1.2rem;font-weight:800;margin-bottom:20px}
+  .modal-title{font-size:1.2rem;font-weight:800;margin-bottom:16px;flex-shrink:0}
+  
+  /* EDITOR */
+  #toast-editor{flex:1;min-height:0;margin-bottom:20px;border-radius:12px;overflow:hidden;border:1px solid var(--gray-200)}
+  .toastui-editor-defaultUI{border:none !important;height:100% !important}
 
   /* SPINNER */
   .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.4);border-top-color:white;border-radius:50%;animation:spin .7s linear infinite}
@@ -214,7 +222,10 @@
     <div class="section">
       <div class="section-header">
         <span class="section-title">현재 docs/ 파일 목록</span>
-        <button class="btn btn-outline btn-sm" id="btn-refresh">↻ 새로고침</button>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-primary btn-sm" id="btn-create-doc" onclick="openCreateModal()">+ 새 문서 작성</button>
+          <button class="btn btn-outline btn-sm" id="btn-refresh">↻ 새로고침</button>
+        </div>
       </div>
       <div id="docs-list"><span class="doc-empty">로딩 중…</span></div>
     </div>
@@ -257,7 +268,7 @@
   <div class="modal">
     <button class="modal-close" onclick="closeEditModal()">×</button>
     <div class="modal-title" id="modal-filename">파일 수정</div>
-    <div class="file-card-body" style="padding:0; grid-template-columns:1fr 80px; margin-bottom:20px">
+    <div class="file-card-body" style="padding:0; grid-template-columns:1fr 80px 100px 100px; margin-bottom:16px; flex-shrink:0">
       <div class="field">
         <label>제목</label>
         <input type="text" id="edit-title">
@@ -268,18 +279,21 @@
       </div>
       <div class="field">
         <label>ID</label>
-        <input type="text" id="edit-id">
+        <input type="text" id="edit-id" placeholder="intro">
       </div>
       <div class="field">
         <label>색상 테마</label>
         <select id="edit-theme"></select>
       </div>
       <div class="field field-full">
-        <label>설명</label>
-        <textarea id="edit-desc"></textarea>
+        <label>설명 (선택)</label>
+        <input type="text" id="edit-desc" placeholder="홈 화면 카드에 표시될 짧은 설명">
       </div>
     </div>
-    <div class="action-row" style="justify-content:flex-end">
+    
+    <div id="toast-editor"></div>
+
+    <div class="action-row" style="justify-content:flex-end; flex-shrink:0">
       <button class="btn btn-outline" onclick="closeEditModal()">취소</button>
       <button class="btn btn-primary" id="btn-save-edit" onclick="saveEdit()">저장 및 배포</button>
     </div>
@@ -460,9 +474,44 @@ window.deleteFile = async (name, sha) => {
   }
 };
 
-/* ─── 메타데이터 수정(모달) ─── */
+/* ─── 에디터 초기화 ─── */
+let toastEditor = null;
+function initEditor() {
+  if (toastEditor) return;
+  toastEditor = new toastui.Editor({
+    el: document.querySelector('#toast-editor'),
+    height: '100%',
+    initialEditType: 'wysiwyg',
+    previewStyle: 'tab',
+    language: 'ko-KR',
+    hideModeSwitch: false
+  });
+}
+
+/* ─── 새 문서 작성(모달) ─── */
+window.openCreateModal = () => {
+  initEditor();
+  editTarget = { name: '', sha: null, text: '' };
+  
+  document.getElementById('modal-filename').textContent = '새 브로슈어 작성';
+  document.getElementById('edit-title').value = '';
+  document.getElementById('edit-pos').value = '';
+  document.getElementById('edit-id').value = '';
+  
+  const th = document.getElementById('edit-theme');
+  if(!th.options.length) th.innerHTML = THEMES.map(t => `<option value="${t.value}">${t.label}</option>`).join('');
+  th.value = 'blue';
+  
+  document.getElementById('edit-desc').value = '';
+  
+  toastEditor.setMarkdown('');
+  document.getElementById('modal-edit').style.display = 'flex';
+};
+
+/* ─── 메타데이터 및 본문 수정(모달) ─── */
 let editTarget = null;
 async function openEditModal(name, sha) {
+  initEditor();
   try {
     const r = await ghFetch(`/repos/${ORG}/${REPO}/contents/docs/${name}`);
     if (!r.ok) throw new Error('파일을 불러올 수 없습니다.');
@@ -480,7 +529,7 @@ async function openEditModal(name, sha) {
     }
 
     editTarget = { name, sha, text: stripped };
-    document.getElementById('modal-filename').textContent = name + ' 속성 수정';
+    document.getElementById('modal-filename').textContent = name + ' 수정';
     document.getElementById('edit-title').value = title;
     document.getElementById('edit-pos').value = pos;
     document.getElementById('edit-id').value = id;
@@ -490,6 +539,8 @@ async function openEditModal(name, sha) {
     th.value = theme;
     
     document.getElementById('edit-desc').value = desc;
+    
+    toastEditor.setMarkdown(editTarget.text);
     document.getElementById('modal-edit').style.display = 'flex';
   } catch(e) {
     alert(e.message);
@@ -520,14 +571,21 @@ window.saveEdit = async () => {
     ''
   ].filter(l => l !== null).join('\n');
   
-  const finalText = frontmatter + editTarget.text;
+  const finalText = frontmatter + toastEditor.getMarkdown();
   const content = btoa(unescape(encodeURIComponent(finalText)));
   
+  let targetName = editTarget.name;
+  if (!targetName) {
+    if (!id) { alert('ID를 입력해주세요 (예: intro). 파일 생성에 필요합니다.'); btn.disabled=false; btn.innerHTML='저장 및 배포'; return; }
+    const prefix = pos ? String(pos).padStart(2,'0') + '-' : '';
+    targetName = prefix + id + '.md';
+  }
+  
   try {
-    const r = await ghFetch(`/repos/${ORG}/${REPO}/contents/docs/${editTarget.name}`, {
+    const r = await ghFetch(`/repos/${ORG}/${REPO}/contents/docs/${targetName}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: `docs: update metadata for ${editTarget.name}`, content, sha: editTarget.sha, branch: BRANCH }),
+      body: JSON.stringify({ message: `docs: update ${targetName} via Web Editor`, content, sha: editTarget.sha, branch: BRANCH }),
     });
     if (!r.ok) { const d = await r.json(); throw new Error(d.message); }
     closeEditModal();
