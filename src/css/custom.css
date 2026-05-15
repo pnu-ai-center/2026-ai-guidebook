@@ -4,6 +4,8 @@
   --ifm-color-primary: #1a4fa0;
   --ifm-font-family-base: "Noto Sans KR", sans-serif;
   --navy: #0a2463;
+  --navy-light: #1e3a8a; /* 기존 navy보다 약간 밝은 색상 */
+  --blue: #1a4fa0;
   --gold: #f59e0b;
 }
 
@@ -37,19 +39,26 @@ body {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
 }
 
-/* 컬럼 및 본문 확장 보장 (Docusaurus 기본 제한 해제) */
-main .row > .col,
+/* 컬럼 및 본문 확장 보장 (줄바꿈 방지) */
+main .row {
+  display: flex;
+  flex-wrap: nowrap !important; /* 강제로 한 줄에 배치 */
+  gap: 32px;
+}
+
+/* 본문 영역은 남은 공간만 꽉 채우도록 설정 */
+main .row > .col:not(.col--3),
 div[class*="docItemCol_"],
 div[class*="docItemContainer_"] {
-  flex: 1 1 auto !important;
+  flex: 1 1 0% !important;
   max-width: 100% !important;
-  width: 100% !important;
+  width: auto !important;
 }
 
 /* 네비게이션 바 */
 
 .navbar {
-  background: var(--blue); /* 약간 더 연한 파란색으로 변경 */
+  background: var(--navy-light); /* 기존 네이비보다 살짝 밝은 색 */
   padding: 0 32px;
   height: 60px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
@@ -92,11 +101,11 @@ aside.theme-doc-sidebar-container {
 }
 
 /* 본문 레이아웃에서 목차(TOC)를 왼쪽으로 이동 */
-main .row {
-  display: flex;
-}
 main .col--3 {
   order: -1; /* 목차를 제일 왼쪽으로 보냄 */
+  flex: 0 0 250px !important;
+  max-width: 250px !important;
+  width: 250px !important;
 }
 
 /* 목차(TOC) 블록 디자인 (참조 사이트 .sidebar 스타일 적용) */
