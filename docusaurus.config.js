@@ -71,10 +71,15 @@ const config = {
 
       items: [
         {
+          href: "https://pnu-ai-center.github.io",
+          position: "right",
+          label: "허브 홈으로",
+        },
+        {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "브로슈어",
+          position: "right",
+          label: "브로슈어 보기",
         },
       ],
     },
