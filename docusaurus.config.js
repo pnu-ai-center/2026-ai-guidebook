@@ -17,13 +17,12 @@ const config = {
   // GitHub Pages URL
   url: "https://pnu-ai-center.github.io",
 
-  // Repository name
-  baseUrl: "/2026-ai-guidebook/",
+  // Repository name (GitHub Actions에서 자동 인식, 로컬은 /)
+  baseUrl: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : "/",
 
   // GitHub Pages deployment config
-  organizationName: "pnu-ai-center",
-
-  projectName: "2026-ai-guidebook",
+  organizationName: process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split('/')[0] : "pnu-ai-center",
+  projectName: process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split('/')[1] : "2026-ai-guidebook",
 
   onBrokenLinks: "warn",
 
