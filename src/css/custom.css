@@ -29,12 +29,18 @@ body {
 
 .theme-doc-markdown {
   background: white;
-  max-width: 960px;
-  margin: auto;
+  width: 100%;
+  max-width: 100%;
   padding: 48px;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* 컬럼 확장 보장 */
+main .row > .col {
+  flex: 1;
+  max-width: 100%;
 }
 
 /* 네비게이션 바 */
