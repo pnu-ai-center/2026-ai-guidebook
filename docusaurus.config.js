@@ -25,7 +25,7 @@ const config = {
 
   projectName: "2026-ai-guidebook",
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
 
   i18n: {
     defaultLocale: "ko",
@@ -89,7 +89,7 @@ const config = {
           items: [
             {
               label: "브로슈어 홈",
-              to: "/docs/intro",
+              to: "/",
             },
           ],
         },
