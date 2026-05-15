@@ -528,7 +528,7 @@ async function openEditModal(name, sha) {
       id = getVal('id'); title = getVal('title'); pos = getVal('sidebar_position'); theme = getVal('theme') || 'blue'; desc = getVal('description');
     }
 
-    editTarget = { name, sha, text: stripped };
+    editTarget = { name, sha: sha || d.sha, text: stripped };
     document.getElementById('modal-filename').textContent = name + ' 수정';
     document.getElementById('edit-title').value = title;
     document.getElementById('edit-pos').value = pos;
