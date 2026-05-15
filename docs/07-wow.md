@@ -1,8 +1,9 @@
 ---
 id: wow
-title: 와우
+title: asd
 sidebar_position: 8
 theme: blue
+description: "asd"
 ---
 # 부산대학교 AI융합교육원
 
