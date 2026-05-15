@@ -484,10 +484,35 @@ function initEditor() {
     initialEditType: 'markdown', // 브로슈어 편집을 위해 기본을 마크다운으로 변경
     previewStyle: 'tab',
     language: 'ko-KR',
-    hideModeSwitch: false
+    hideModeSwitch: false,
+    events: {
+      change: updateMDXPreviewStyles
+    }
   });
   
   injectCustomCSS();
+}
+
+/* 마크다운 본문에 포함된 MDX <style>{`...`}</style> 코드를 추출하여 미리보기에 실시간 적용 */
+function updateMDXPreviewStyles() {
+  if (!toastEditor) return;
+  const md = toastEditor.getMarkdown();
+  
+  // MDX 스타일 정규식 매칭 (<style>{` ... `}</style> 형태)
+  const match = md.match(/<style>\s*(?:\{`|\{)?([\s\S]*?)(?:`\}|\})?\s*<\/style>/);
+  
+  let styleEl = document.getElementById('dynamic-mdx-style');
+  if (!styleEl) {
+    styleEl = document.createElement('style');
+    styleEl.id = 'dynamic-mdx-style';
+    document.head.appendChild(styleEl);
+  }
+  
+  if (match && match[1]) {
+    styleEl.innerHTML = match[1];
+  } else {
+    styleEl.innerHTML = '';
+  }
 }
 
 /* 실제 홈페이지의 디자인(custom.css)을 미리보기 화면에 완벽하게 적용하는 함수 */
