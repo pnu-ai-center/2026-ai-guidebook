@@ -105,8 +105,8 @@ const config = {
       items: [
         {
           type: 'dropdown',
-          label: '브로슈어 파트 이동',
-          position: 'left',
+          label: '브로슈어 목차',
+          position: 'right',
           items: dynamicNavItems,
         },
         {
