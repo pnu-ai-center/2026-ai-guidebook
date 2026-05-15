@@ -132,6 +132,17 @@ div[class*="docItemContainer_"] {
   transform-origin: top;
 }
 
+/* 마우스가 버튼에서 메뉴로 이동할 때 틈(Gap)으로 인해 메뉴가 닫히는 현상 방지용 투명 다리 */
+.dropdown__menu::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
+}
+
 @keyframes dropdownFade {
   from { opacity: 0; transform: translateY(-10px) scale(0.98); }
   to { opacity: 1; transform: translateY(0) scale(1); }
