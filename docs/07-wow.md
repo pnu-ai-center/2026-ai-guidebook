@@ -1,10 +1,9 @@
 ---
 id: wow
-sidebar_position: 7
 title: 와우
-thumbnail: thumbnails/template.png
+sidebar_position: 8
+theme: blue
 ---
-
 # 부산대학교 AI융합교육원
 
 부산대학교 AI융합교육원입니다.
