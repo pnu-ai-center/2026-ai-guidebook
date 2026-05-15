@@ -37,16 +37,19 @@ body {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.02);
 }
 
-/* 컬럼 확장 보장 */
-main .row > .col {
-  flex: 1;
-  max-width: 100%;
+/* 컬럼 및 본문 확장 보장 (Docusaurus 기본 제한 해제) */
+main .row > .col,
+div[class*="docItemCol_"],
+div[class*="docItemContainer_"] {
+  flex: 1 1 auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 /* 네비게이션 바 */
 
 .navbar {
-  background: var(--navy);
+  background: var(--blue); /* 약간 더 연한 파란색으로 변경 */
   padding: 0 32px;
   height: 60px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
@@ -104,6 +107,8 @@ main .col--3 {
   box-shadow: 0 1px 8px rgba(0,0,0,.07);
   position: sticky;
   top: 90px; /* 네비게이션바 아래로 고정 */
+  width: 250px;
+  min-width: 250px;
 }
 
 /* 목차 링크 아이템 디자인 */

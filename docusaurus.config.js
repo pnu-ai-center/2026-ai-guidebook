@@ -29,9 +29,16 @@ function getDynamicNavItems() {
   });
 }
 
+const dynamicNavItems = getDynamicNavItems();
+const firstDocLink = dynamicNavItems.length > 0 ? dynamicNavItems[0].to : '/docs/intro';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "2026 AI 교육 안내서",
+  
+  customFields: {
+    firstDocLink,
+  },
 
   tagline: "부산대학교 AI융합교육원 온라인 브로슈어",
 
@@ -97,7 +104,7 @@ const config = {
       },
 
       items: [
-        ...getDynamicNavItems(),
+        ...dynamicNavItems,
         {
           href: "https://pnu-ai-center.github.io",
           position: "right",
