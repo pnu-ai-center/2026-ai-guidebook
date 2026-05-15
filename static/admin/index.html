@@ -285,10 +285,6 @@
         <label>색상 테마</label>
         <select id="edit-theme"></select>
       </div>
-      <div class="field field-full">
-        <label>설명 (선택)</label>
-        <input type="text" id="edit-desc" placeholder="홈 화면 카드에 표시될 짧은 설명">
-      </div>
     </div>
     
     <div id="toast-editor"></div>
@@ -551,7 +547,7 @@ window.openCreateModal = () => {
   if(!th.options.length) th.innerHTML = THEMES.map(t => `<option value="${t.value}">${t.label}</option>`).join('');
   th.value = 'blue';
   
-  document.getElementById('edit-desc').value = '';
+  th.value = 'blue';
   
   toastEditor.setMarkdown('');
   document.getElementById('modal-edit').style.display = 'flex';
@@ -567,14 +563,14 @@ async function openEditModal(name, sha) {
     const d = await r.json();
     const text = decodeURIComponent(escape(atob(d.content)));
     
-    let id='', title='', pos='', theme='blue', desc='';
+    let id='', title='', pos='', theme='blue';
     const match = text.match(/^---\s*([\s\S]*?)---\s*/);
     let stripped = text;
     if (match) {
       stripped = text.substring(match[0].length);
       const fm = match[1];
       const getVal = key => { const m = fm.match(new RegExp(`^${key}:\\s*(.*)$`, 'm')); return m ? m[1].replace(/^["']|["']$/g, '').trim() : ''; };
-      id = getVal('id'); title = getVal('title'); pos = getVal('sidebar_position'); theme = getVal('theme') || 'blue'; desc = getVal('description');
+      id = getVal('id'); title = getVal('title'); pos = getVal('sidebar_position'); theme = getVal('theme') || 'blue';
     }
 
     editTarget = { name, sha: sha || d.sha, text: stripped };
@@ -586,8 +582,6 @@ async function openEditModal(name, sha) {
     const th = document.getElementById('edit-theme');
     if(!th.options.length) th.innerHTML = THEMES.map(t => `<option value="${t.value}">${t.label}</option>`).join('');
     th.value = theme;
-    
-    document.getElementById('edit-desc').value = desc;
     
     toastEditor.setMarkdown(editTarget.text);
     document.getElementById('modal-edit').style.display = 'flex';
@@ -607,7 +601,6 @@ window.saveEdit = async () => {
   const title = document.getElementById('edit-title').value.trim();
   const pos = document.getElementById('edit-pos').value.trim();
   const theme = document.getElementById('edit-theme').value;
-  const desc = document.getElementById('edit-desc').value.trim();
   
   const frontmatter = [
     '---',
@@ -615,7 +608,6 @@ window.saveEdit = async () => {
     title ? `title: ${title}` : null,
     pos ? `sidebar_position: ${pos}` : null,
     theme ? `theme: ${theme}` : null,
-    desc ? `description: "${desc.replace(/"/g,"'")}"` : null,
     '---',
     ''
   ].filter(l => l !== null).join('\n');
