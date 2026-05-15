@@ -104,7 +104,12 @@ const config = {
       },
 
       items: [
-        ...dynamicNavItems,
+        {
+          type: 'dropdown',
+          label: '브로슈어 파트 이동',
+          position: 'left',
+          items: dynamicNavItems,
+        },
         {
           href: "https://pnu-ai-center.github.io",
           position: "right",
